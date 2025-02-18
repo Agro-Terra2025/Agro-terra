@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro-Terra</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"></script>
+    <style>
+        @import url(https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap);
+        @import url(https://fonts.google.com/specimen/Abril+Fatface?query=abril&sidebar.open&selection.family=Abril+Fatface);
+        @import url(https://fonts.google.com/specimen/Montserrat?query=monts);
+
+        /* Général */
+        body {
+            margin: 0 auto;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        * {
+            font-family: Merriweather, sans-serif;
+            box-sizing: border-box;
+        }
+
+        /* Section de la page d'accueil */
+        .top-page {
+            background-image: url(https://i.ibb.co/vvMpQqmx/bg.png);
+            background-size: cover;
+            height: 70vh;
+            padding: 25px;
+        }
+
+        /* Header */
+        header.header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 20px 50px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            width: 90%;
+            max-width: 1200px;
+            position: relative;
+        }
+
+        /* Logo */
+        header.header img {
+            margin: auto;
+            width: 70px;
+            border-radius: 50%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        header.header img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Barre de navigation */
+        .menu-style {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav.nav {
+            display: flex;
+            margin: auto;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            background: linear-gradient(90deg, #866a49e6, rgba(182, 142, 94, 0.9));
+            padding: 8px 30px;
+            border-radius: 50px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        nav.nav li {
+            margin: 0 15px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            transition: color 0.3s ease, transform 0.2s ease;
+        }
+
+        nav.nav li:hover {
+            color: rgba(255, 215, 0, 0.9);
+            transform: scale(1.1);
+        }
+
+        nav.nav li.active {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+        nav.nav li::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 3px;
+            background: #ffd700;
+            transition: width 0.3s ease;
+            margin: 0 auto;
+        }
+
+        nav.nav li:hover::after {
+            width: 50%;
+        }
+
+        /* Landing Page */
+        .big-title {
+            color: rgba(166, 130, 40, 0.742);
+            font-family: "Abril Fatface";
+            font-size: 80px;
+            margin: 50px 0px;
+            text-align: center;
+        }
+
+        /* Mini titre souligné et stylé */
+        .mini-tilte-1 h2 {
+            text-align: center;
+            text-decoration: none;
+            text-decoration-color: none;
+            text-decoration-thickness: none;
+            text-decoration-style: none;
+            font-family: "Abril Fatface", serif;
+            font-size: 36px;
+            color: #333;
+            margin: 10px 0;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .mini-tilte-1 h2:hover {
+            color: #c98a4184;
+            transform: scale(1.1);
+        }
+
+        /* Card Frame */
+        .card-frame {
+            background-color: rgba(225, 220, 220, 0.37);
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px auto;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* fonctionnalité 1 */
+        .irrigation-frame {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-irrigation {
+            flex: 1;
+            max-width: 250px;
+            height: auto;
+            border-radius: 8px;
+            margin-left: 25px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-content {
+            flex: 2;
+            margin-right: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .text-content h3 {
+            margin-top: 0;
+            color: #866a49e6;
+            font-size: 24px;
+        }
+
+        .text-content p {
+            font-size: 16px;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        /* Bouton */
+        .boutton {
+            padding: 12px 24px;
+            width: auto;
+            margin: 30px;
+            background-color: #a57f50bd;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background-color 0.4s ease, transform 0.3s ease,
+            box-shadow 0.3s ease;
+            align-self: flex-start;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .boutton:hover {
+            background-color: #cda77c9b;
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* fonctionnalité 2 */
+        .conseille-frame {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-conseille {
+            flex: 1;
+            max-width: 250px;
+            height: auto;
+            border-radius: 8px;
+            margin-left: 25px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            order: 2;
+        }
+
+        .text-content {
+            flex: 2;
+            margin-left: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            order: 1;
+        }
+
+        .text-content h3 {
+            margin-top: 0;
+            color: #866a49e6;
+            font-size: 24px;
+        }
+
+        .text-content p {
+            font-size: 16px;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        /* fonctionnalité 3 */
+        .météo-frame {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-météo {
+            flex: 1;
+            max-width: 250px;
+            height: auto;
+            border-radius: 8px;
+            margin-left: 25px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-content {
+            flex: 2;
+            margin-right: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .text-content h3 {
+            margin-top: 0;
+            color: #866a49e6;
+            font-size: 24px;
+        }
+
+        .text-content p {
+            font-size: 16px;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        /* notre equipe */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 30px;
+        }
+
+        h3 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .lead {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #666;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .row.s_nb_column_fixed {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .col-lg-6.pt32.pb32.o_colored_level {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            transition: all 0.3s ease;
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .col-lg-6.pt32.pb32.o_colored_level:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .team-member-info {
+            margin-bottom: 15px;
+        }
+
+        .team-member-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .text-muted {
+            color: #777;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .s_col_no_resize {
+            display: flex;
+            align-items: center;
+        }
+
+        /* bas de page */
+        footer {
+            background: linear-gradient(100deg, #644e35bb, rgba(152, 114, 67, 0.635));
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .footer-header {
+            margin-bottom: 20px;
+        }
+
+        .footer-header h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .footer-header p {
+            font-size: 14px;
+            margin: 5px 0 0;
+        }
+
+        .footer-contact div {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer hr {
+            border: 0.5px solid rgba(0, 0, 0, 0.5);
+            margin: 20px 0;
+        }
+
+        .footer-bottom img {
+            width: 100px;
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            margin: 0 10px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .social-icon {
+            margin: 0 5px;
+            font-size: 20px;
+        }
+
+        .social-icon:hover {
+            color: rgb(150, 85, 73);
+        }
+
+        .color-1 {
+            color: rgb(88, 79, 67);
+        }
+
+        .copyright {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #fff;
+            text-align: left;
+        }
+
+        .language-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .language {
+            width: auto;
+            display: inline-flex;
+            justify-content: center;
+            background-color: #4e3e2a;
+            margin: auto;
+            margin-right: -35px;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .language:hover {
+            background-color: #6a5533;
+            transform: scale(1.05);
+        }
+
+        .language-menu {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 100%;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            min-width: 150px;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-20px);
+            transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+        }
+
+        .language-menu li {
+            text-align: left;
+            animation: slide-in 0.4s ease forwards;
+            opacity: 0;
+            transform: translateX(-10px);
+        }
+
+        .language-menu li a {
+            display: block;
+            padding: 12px 16px;
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+        }
+
+        .language-menu li a:hover {
+            background-color: #f4f4f4;
+            color: #5a4633;
+            transform: translateX(5px);
+        }
+
+        .language-dropdown:hover .language-menu {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .language-dropdown:hover .language-menu li {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        @keyframes slide-in {
+            from {
+                opacity: 0;
+                transform: translateX(-15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header.header {
+                flex-direction: column;
+                padding: 10px 20px;
+            }
+
+            nav.nav {
+                flex-direction: column;
+                padding: 10px;
+                position: static;
+                transform: none;
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            nav.nav li {
+                margin: 10px 0;
+            }
+
+            .big-title {
+                font-size: 50px;
+            }
+
+            .text-content {
+                margin: 0;
+            }
+
+            .image-irrigation, .image-conseille, .image-météo {
+                margin: 20px 0;
+                max-width: 100%;
+            }
+
+            .footer-contact div {
+                margin-bottom: 20px;
+            }
+
+            .footer-links a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .big-title {
+                font-size: 36px;
+            }
+
+            .text-content h3 {
+                font-size: 20px;
+            }
+
+            .text-content p {
+                font-size: 14px;
+            }
+
+            .boutton {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+
+            .footer-header h3 {
+                font-size: 16px;
+            }
+
+            .footer-header p {
+                font-size: 12px;
+            }
+
+            .footer-contact div {
+                font-size: 14px;
+            }
+
+            .footer-links a {
+                font-size: 14px;
+            }
+
+            .social-icon {
+                font-size: 18px;
+            }
+
+            .copyright {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <section class="top-page">
+
+        <header class="header">
+            <a href="home.html" class="menu-style" title="Go to Home">
+                <img src="https://i.ibb.co/1YpQhZWb/Agro-Terra.png" alt="agro-terr" border="0">
+            </a>
+                        <nav class="nav">
+                <li><a href="home.html" class="menu-style">Home</a></li>
+                <li><a href="Irrigation.html" class="menu-style">Irrigation Intelligente</a></li>
+                <li><a href="Météo.html" class="menu-style">Météo</a></li>
+                <li><a href="Conseille.html" class="menu-style">Conseil plantation</a></li>
+                <li><a href="Croissance.html" class="menu-style">Croissance Prédictive</a></li>
+                <li><a href="contacter.html" class="menu-style">Contactez-nous</a></li>
+            </nav>  
+            <div class="language-dropdown">
+                <button class="language">Langue</button>
+                <ul class="language-menu">
+                    <li><a href="home.html">Français</a></li>
+                    <li><a href="home-ang.html">English</a></li>
+                    <li><a href="home-ar.html">العربية</a></li>
+                </ul>
+            </div>
+        </header>
+    
+
+        <div class="landing-page">
+            <h1 class="big-title">Agro-Terra</h1>
+            <section class="card-frame">
+                <p>Agro-Terra est une plate-forme spécialisée en agriculture, conçue pour informer et accompagner les agriculteurs, chercheurs et autres professionnels du secteur. Elle propose des ressources sur les techniques agricoles, les innovations, la gestion durable, ainsi que les actualités et tendances du marché. C’est un espace qui favorise également l’échange d’expériences et de savoir-faire pour soutenir le développement de pratiques agricoles efficaces et durables.</p>
+            </section>
+        </div>
+
+        <div class="mini-tilte-1">
+            <h2 style="text-align: center;">We create the perfect</h2><h2 style="text-align: center;">tailored solution for you</h2><p>
+        </div>
+
+        <!-- fonctionnalité 1 -->
+        <section class="Irrigation-1">
+            <div class="header">
+                <div class="text-content">
+                    <div class="content-box">
+                        <section class="irrigation-frame">
+                            <div class="text-content">
+                                <h3 class="irrigation-1">Irrigation Intelligente : Économisez l'eau tout en nourrissant vos plantes efficacement</h3>
+                                <p>Découvrez notre programme révolutionnaire d'irrigation : une solution qui optimise chaque goutte d'eau pour répondre aux besoins des plantes tout en évitant le gaspillage. Cultivez plus intelligemment, préservez les ressources et assurez une croissance idéale à vos cultures.</p>
+                                <a href="Irrigation.html">
+                                    <button class="boutton">En savoir plus</button>
+                                </a>
+                            </div>
+                            <img src="https://i.ibb.co/ymjWR8hC/irrig.jpg" alt="Photo irrigation intelligente" class="image-irrigation">
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- fonctionnalité 2 -->
+        <section class="Conseils_de_Plantation">
+            <div class="header">
+                <div class="text-content">
+                    <div class="content-box">
+                        <section class="conseille-frame">
+                            <div class="text-content">
+                                <h3 class="conseille-1">Conseils de Plantation</h3>
+                                <p>Conseils de Plantation est une fonctionnalité interactive qui aide les agriculteurs à optimiser leurs plantations en s'appuyant sur la géolocalisation, les données météorologiques en temps réel et les meilleures pratiques agricoles pour fournir des recommandations personnalisées.</p>                                
+                                <a href="Conseille.html">
+                                    <button class="boutton">En savoir plus</button>
+                                </a>
+                            </div>
+                            <img src="https://i.ibb.co/dwXBBqLS/conseill-agri.jpg" alt="Photo Conseils de Plantation" class="image-conseille">
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                <!-- fonctionnalité 3 -->
+                <section class="météo-1">
+                    <div class="header">
+                        <div class="text-content">
+                            <div class="content-box">
+                                <section class="météo-frame">
+                                    <div class="text-content">
+                                        <h3 class="météo-1">Météo</h3>
+                                        <p>La fonction météo récupère les données climatiques locales (température, ressenti, humidité, vent) et affiche des conseils adaptés, tout en utilisant des couleurs différentes pour les températures.</p>
+                                        <a href="Météo.html">
+                                            <button class="boutton">En savoir plus</button>
+                                        </a>
+                                    </div>
+                                    <img src="https://i.ibb.co/yBQDSq63/m-t-o-11.jpg" alt="Photo météo" class="image-météo">
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- notre equipe -->
+                <div class="container">
+                    <h3 >Rencontrez nos experts agricoles</h3>
+                    <p class="lead">Des experts dévoués au service de votre réussite agricole</p>
+                    <div class="row s_nb_column_fixed">
+<div class="col-lg-6 pt32 pb32 o_colored_level" data-name="Team Member">
+                        <div class="row s_col_no_resize s_col_no_bgcolor">
+<!-- L'image a été retirée -->
+<div class="col-lg-9">
+                            <div class="team-member-info">
+<h4 class="team-member-name">Sami</h4>
+<p class="text-muted mb-3">Directeur Général Agricole</p>
+                            </div>
+                            <p>Fondateur et visionnaire en chef, Samy est le moteur de l'entreprise. Il aime rester occupé en participant au développement des stratégies logicielles, marketing et d'expérience client.</p>
+</div>
+                        </div>
+</div>
+<div class="col-lg-6 pt32 pb32 o_colored_level" data-name="Team Member">
+                        <div class="row s_col_no_resize s_col_no_bgcolor">
+<!-- L'image a été retirée -->
+<div class="col-lg-9">
+                            <div class="team-member-info">
+<h4 class="team-member-name">Mohamed Amine</h4>
+<p class="text-muted mb-3">Directeur Commercial Agricole</p>
+                            </div>
+                            <p>Mohamed Amine adore relever des défis. Fort de son expérience de plusieurs années en tant que directeur commercial dans l'industrie du logiciel, il a contribué à l'essor de l'entreprise. Mohamed fait partie des meilleurs esprits.</p>
+</div>
+                        </div>
+</div>
+                    </div>
+</div>
+
+            <!-- bas de page -->
+            </head>
+            <body>
+                <footer>
+                    <div class="footer-header">
+                        <h3 class="mini-tilte-1">Comment pouvons-nous aider ?</h3>
+                        <h3 class="mini-tilte-1">Contactez-nous à tout moment</h3>
+                    </div>
+                    <div class="footer-contact">
+                        <div>
+                            <strong class="color-1">Appelez-nous :</strong>
+                            <a href="tel:+212674556060">+212 674 556 060</a>
+                        </div>
+                        <div>
+                            <strong class="color-1" >Envoyez-nous un message :</strong>
+                            <a href="mailto:2025.agroterra@gmail.com">2025.agroterra@gmail.com</a>
+                        </div>
+                        <div>
+                            <strong class="color-1">Suivez-nous :</strong>
+                            <a href="https://web.facebook.com/profile.php?id=61570450615095&sk=about_contact_and_basic_info" class="social-icon"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/agro.terra.2025/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="https://x.com/2025Agro_terra" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/in/agro-terra-681b08340/recent-activity/all/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="footer-bottom">
+                        <img src="https://i.ibb.co/1YpQhZWb/Agro-Terra.png" alt="Agro-Terra Logo">
+                        <div class="footer-links">
+                            <a href="home.html">Home</a> |
+                            <a href="contacter.html">Contactez-nous</a> |
+                            <a href="Conditions-de-services.html">Conditions de services</a> |
+                            <a href="Politique-de-vie-priv%C3%A9e.html">Politique de vie privée</a> |
+                        </div>
+                    </div>
+                    <p class="copyright"> Copyright © Agro-Terra </p>
+                </footer>
+            </body>
+            </html>
+            
+
+
+
+        </section>
+    </body> 
+</html>

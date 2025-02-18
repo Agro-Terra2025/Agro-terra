@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irrigation Intelligente</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"></script>
+</head>
+<body>
+<body></body>
+    <!-- Menu -->
+    <section class="top-page">
+
+        <header class="header">
+            <a href="home-ar.html" class="menu-style"><img src="https://i.ibb.co/1YpQhZWb/Agro-Terra.png" alt=""></a>
+            <nav class="nav">
+                <li><a href="home-ar.html" class="menu-style">الصفحة الرئيسية</a></li>
+                <li><a href="Irrigation-ar.html" class="menu-style">الري الذكي</a></li>
+                <li><a href="Météo-ar.html" class="menu-style">الطقس</a></li>
+                <li><a href="Conseille-ar.html" class="menu-style">نصيحة الزراعة</a></li>
+                <li><a href="Croissance-ar.html" class="menu-style">النمو التنبؤي</a></li>
+                <li><a href="contacter-ar.html" class="menu-style">اتصل بنا</a></li>
+            </nav>
+            <div class="language-dropdown">
+                <button class="language">اللغة</button>
+                <ul class="language-menu">
+                    <li><a href="-Irrigation.html">Français</a></li>
+                    <li><a href="Irrigation-ang.html">English</a></li>
+                    <li><a href="Irrigation-ar.html">العربية</a></li>
+                </ul>
+            </div>
+        </header>
+
+            <!-- Option -->
+
+<header>
+    <div class="header-content">
+        <img src="https://i.ibb.co/rK76G0QZ/Designer-1.jpg" alt="Photo d'irrigation" class="header-img">
+        <div class="header-text">
+            <h1>الري الذكي</h1>
+            <p>يستخدم الري الذكي أجهزة استشعار لقياس رطوبة التربة والظروف المناخية، مما يتيح تعديل كمية المياه بشكل تلقائي لكل محصول. كما يوفر إدارة عن بُعد عبر التطبيقات، مما يتيح مراقبة في الوقت الفعلي. من خلال دمج التوقعات الجوية، يعمل على تحسين استخدام المياه وفقًا للاحتياجات الفعلية للنباتات. الهدف هو تقليل الهدر، توفير الموارد وضمان نمو مثالي للمحاصيل.</p>
+        </div>
+    </div>
+</header>
+
+<main>
+            <div id="calculator-container">
+                <h2>Calculateur d'Irrigation Intelligent</h2>
+                <form id="irrigation-form">
+                    <label for="plant-name">Nom de la plante</label>
+                            <select id="plant-name">
+                        <!-- Céréales -->
+                        <optgroup label="الحبوب">
+                            <option value="ذرة">ذرة</option>
+                    <option value="سرغوم">سرغوم</option>
+                    <option value="دخن لؤلؤي">دخن لؤلؤي</option>
+                    <option value="فونيو أسود">فونيو أسود</option>
+                    <option value="تيف">تيف</option>
+                    <option value="أرز المنغروف">أرز المنغروف</option>
+                    <option value="إليوسين">إليوسين</option>
+                    <option value="قمح قاسي">قمح قاسي</option>
+                    <option value="شعير">شعير</option>
+                    <option value="شوفان">شوفان</option>
+                    <option value="أرز بسمتي">أرز بسمتي</option>
+                    <option value="أرز ياسمين">أرز ياسمين</option>
+                    <option value="أرز أحمر">أرز أحمر</option>
+                    <option value="أرز أسود">أرز أسود</option>
+                    <option value="حبوب إيمر الصغيرة">حبوب إيمر الصغيرة</option>
+                    <option value="حبوب إيمر الكبيرة">حبوب إيمر الكبيرة</option>
+                    <option value="قطيفة">قطيفة</option>
+                    <option value="كينوا بيضاء">كينوا بيضاء</option>
+                    <option value="كينوا حمراء">كينوا حمراء</option>
+                    <option value="كينوا سوداء">كينوا سوداء</option>
+                    <option value="قمح طري">قمح طري</option>
+                    <option value="كاموت">كاموت</option>
+                    <option value="حنطة سوداء">حنطة سوداء</option>
+                    <option value="جاودار">جاودار</option>
+                    <option value="فارو">فارو</option>
+                    <option value="تريتيكالي">تريتيكالي</option>
+                    <option value="قمح خوراسان">قمح خوراسان</option>
+                    <option value="دخن شائع">دخن شائع</option>
+                    <option value="دخن ياباني">دخن ياباني</option>
+                    <option value="دخن هندي">دخن هندي</option>
+                    <option value="فونيو أبيض">فونيو أبيض</option>
+                    <option value="قمح تركي">قمح تركي</option>
+                    <option value="شعير لؤلؤي">شعير لؤلؤي</option>
+                    <option value="شعير مقشر">شعير مقشر</option>
+                    <option value="شوفان عاري">شوفان عاري</option>
+                    <option value="آينكورن">آينكورن</option>
+                </optgroup>
+                
+                <!-- البقوليات -->
+                <optgroup label="البقوليات">
+                    <option value="نييبي">نييبي</option>
+                    <option value="بازلاء بامبارا">بازلاء بامبارا</option>
+                    <option value="فواندزو">فواندزو</option>
+                    <option value="دوليك">دوليك</option>
+                    <option value="بازلاء أنغولا">بازلاء أنغولا</option>
+                    <option value="عدس أرضي">عدس أرضي</option>
+                    <option value="فول مونغو">فول مونغو</option>
+                    <option value="بازلاء كاجان">بازلاء كاجان</option>
+                    <option value="فول">فول</option>
+                    <option value="حمص">حمص</option>
+                    <option value="عدس أخضر">عدس أخضر</option>
+                    <option value="عدس مرجاني">عدس مرجاني</option>
+                    <option value="عدس بني">عدس بني</option>
+                    <option value="ترمس">ترمس</option>
+                    <option value="فول أحمر">فول أحمر</option>
+                    <option value="فول أسود">فول أسود</option>
+                    <option value="فول أبيض">فول أبيض</option>
+                    <option value="فول بينتو">فول بينتو</option>
+                    <option value="فول بورلوتي">فول بورلوتي</option>
+                    <option value="حلبة">حلبة</option>
+                    <option value="صويا">صويا</option>
+                    <option value="جيس">جيس</option>
+                    <option value="نفل تحت الأرض">نفل تحت الأرض</option>
+                    <option value="فول سوداني">فول سوداني</option>
+                    <option value="حلبة">حلبة</option>
+                    <option value="بازلاء مكسورة">بازلاء مكسورة</option>
+                </optgroup>
+                
+                <!-- الدرنات والجذور -->
+                <optgroup label="الدرنات">
+                    <option value="منيهوت">منيهوت</option>
+                    <option value="يام مجنح">يام مجنح</option>
+                    <option value="قلقاس عملاق">قلقاس عملاق</option>
+                    <option value="بطاطا حلوة برتقالية">بطاطا حلوة برتقالية</option>
+                    <option value="كولوكاسيا">كولوكاسيا</option>
+                    <option value="ماكابو">ماكابو</option>
+                    <option value="يام صيني">يام صيني</option>
+                    <option value="بطاطا حلوة بنفسجية">بطاطا حلوة بنفسجية</option>
+                    <option value="يام مائي">يام مائي</option>
+                    <option value="قلقاس بنفسجي">قلقاس بنفسجي</option>
+                    <option value="يام أبيض">يام أبيض</option>
+                    <option value="بطاطا حلوة بيضاء">بطاطا حلوة بيضاء</option>
+                    <option value="يام أحمر">يام أحمر</option>
+                    <option value="بطاطا حلوة صفراء">بطاطا حلوة صفراء</option>
+                    <option value="يام بري">يام بري</option>
+                    <option value="بطاطا حلوة أرجوانية">بطاطا حلوة أرجوانية</option>
+                    <option value="يام أصفر">يام أصفر</option>
+                    <option value="بطاطا حلوة حمراء">بطاطا حلوة حمراء</option>
+                    <option value="يام بنفسجي">يام بنفسجي</option>
+                    <option value="بطاطا حلوة سوداء">بطاطا حلوة سوداء</option>
+                    <option value="يام بلحم أصفر">يام بلحم أصفر</option>
+                    <option value="بطاطا حلوة بلحم أبيض">بطاطا حلوة بلحم أبيض</option>
+                    <option value="يام بلحم أحمر">يام بلحم أحمر</option>
+                    <option value="بطاطا حلوة بلحم برتقالي">بطاطا حلوة بلحم برتقالي</option>
+                    <option value="يام بلحم بنفسجي">يام بلحم بنفسجي</option>
+                    <option value="بطاطا حلوة بلحم وردي">بطاطا حلوة بلحم وردي</option>
+                    <option value="يام بلحم أبيض">يام بلحم أبيض</option>
+                    <option value="بطاطا حلوة بلحم أصفر">بطاطا حلوة بلحم أصفر</option>
+                    <option value="يام بلحم برتقالي">يام بلحم برتقالي</option>
+                    <option value="بطاطا حلوة بلحم بنفسجي">بطاطا حلوة بلحم بنفسجي</option>
+                </optgroup>
+                
+                <!-- أشجار الفاكهة -->
+                <optgroup label="أشجار الفاكهة">
+                    <option value="باوباب">باوباب</option>
+                    <option value="كاريتي">كاريتي</option>
+                    <option value="مانجو">مانجو</option>
+                    <option value="بابايا أفريقي">بابايا أفريقي</option>
+                    <option value="جوافة السنغال">جوافة السنغال</option>
+                    <option value="عناب">عناب</option>
+                    <option value="كاجو">كاجو</option>
+                    <option value="نخيل الزيت">نخيل الزيت</option>
+                    <option value="نخيل التمر">نخيل التمر</option>
+                    <option value="ليمون">ليمون</option>
+                    <option value="رمان">رمان</option>
+                    <option value="أفوكادو">أفوكادو</option>
+                    <option value="يوسفي">يوسفي</option>
+                    <option value="جريب فروت">جريب فروت</option>
+                    <option value="تين">تين</option>
+                    <option value="جوافة">جوافة</option>
+                    <option value="برقوق أفريقي">برقوق أفريقي</option>
+                    <option value="خوخ أفريقي">خوخ أفريقي</option>
+                    <option value="مشمش">مشمش</option>
+                    <option value="كرز أفريقي">كرز أفريقي</option>
+                    <option value="فستق">فستق</option>
+                    <option value="لوز">لوز</option>
+                    <option value="كاكاو">كاكاو</option>
+                    <option value="قهوة">قهوة</option>
+                    <option value="موز">موز</option>
+                    <option value="أناناس">أناناس</option>
+                    <option value="جوافة صينية">جوافة صينية</option>
+                    <option value="ليمونية">ليمونية</option>
+                    <option value="رمان قزم">رمان قزم</option>
+                    <option value="نخيل التمر القزم">نخيل التمر القزم</option>
+                </optgroup>
+                
+                <!-- الخضروات التقليدية -->
+                <optgroup label="الخضروات التقليدية">
+                    <option value="موريلا سوداء">موريلا سوداء</option>
+                    <option value="حميض غينيا">حميض غينيا</option>
+                    <option value="خس الصحراء">خس الصحراء</option>
+                    <option value="قطيفة حمراء">قطيفة حمراء</option>
+                    <option value="باذنجان مر">باذنجان مر</option>
+                    <option value="بامية">بامية</option>
+                    <option value="قرع أفريقي">قرع أفريقي</option>
+                    <option value="طماطم محلية">طماطم محلية</option>
+                    <option value="فلفل أفريقي">فلفل أفريقي</option>
+                    <option value="بصل أفريقي">بصل أفريقي</option>
+                    <option value="سبانخ أفريقية">سبانخ أفريقية</option>
+                    <option value="ملفوف أفريقي">ملفوف أفريقي</option>
+                    <option value="جزر أفريقي">جزر أفريقي</option>
+                    <option value="شمندر أفريقي">شمندر أفريقي</option>
+                    <option value="فليفلة أفريقية">فليفلة أفريقية</option>
+                    <option value="خيار أفريقي">خيار أفريقي</option>
+                    <option value="كوسا أفريقية">كوسا أفريقية</option>
+                    <option value="فول أخضر أفريقي">فول أخضر أفريقي</option>
+                    <option value="بازلاء أفريقية">بازلاء أفريقية</option>
+                    <option value="عدس أفريقي">عدس أفريقي</option>
+                    <option value="فول أفريقي">فول أفريقي</option>
+                    <option value="فجل أفريقي">فجل أفريقي</option>
+                    <option value="لفت أفريقي">لفت أفريقي</option>
+                    <option value="كرفس أفريقي">كرفس أفريقي</option>
+                    <option value="بقدونس أفريقي">بقدونس أفريقي</option>
+                    <option value="كزبرة أفريقية">كزبرة أفريقية</option>
+                    <option value="ريحان أفريقي">ريحان أفريقي</option>
+                    <option value="زعتر أفريقي">زعتر أفريقي</option>
+                    <option value="إكليل الجبل الأفريقي">إكليل الجبل الأفريقي</option>
+                    <option value="نعناع أفريقي">نعناع أفريقي</option>
+                </optgroup>
+                
+                <!-- النباتات الطبية -->
+                <optgroup label="النباتات الطبية">
+                    <option value="أرتميسيا">أرتميسيا</option>
+                    <option value="غريفونيا">غريفونيا</option>
+                    <option value="كينكيليبا">كينكيليبا</option>
+                    <option value="مورينغا">مورينغا</option>
+                    <option value="ألوفيرا">ألوفيرا</option>
+                    <option value="نيم">نيم</option>
+                    <option value="زنجبيل">زنجبيل</option>
+                    <option value="كركم">كركم</option>
+                    <option value="ريحان مقدس">ريحان مقدس</option>
+                    <option value="ليمونية">ليمونية</option>
+                    <option value="زعتر">زعتر</option>
+                    <option value="إكليل الجبل">إكليل الجبل</option>
+                    <option value="نعناع فلفلي">نعناع فلفلي</option>
+                    <option value="كزبرة">كزبرة</option>
+                    <option value="بقدونس">بقدونس</option>
+                    <option value="كمون">كمون</option>
+                    <option value="حلبة">حلبة</option>
+                    <option value="شبت">شبت</option>
+                    <option value="زعفران">زعفران</option>
+                    <option value="أوريجانو">أوريجانو</option>
+                    <option value="بابونج">بابونج</option>
+                    <option value="لافندر">لافندر</option>
+                    <option value="جرانيوم">جرانيوم</option>
+                    <option value="بيغونيا">بيغونيا</option>
+                    <option value="كاميليا">كاميليا</option>
+                    <option value="فوشيا">فوشيا</option>
+                    <option value="أقحوان">أقحوان</option>
+                    <option value="بنفسج">بنفسج</option>
+                    <option value="زنبق">زنبق</option>
+                    <option value="توليب">توليب</option>
+                </optgroup>
+                
+                <!-- النباتات العطرية -->
+                <optgroup label="النباتات العطرية">
+                    <option value="زعتر">زعتر</option>
+                    <option value="إكليل الجبل">إكليل الجبل</option>
+                    <option value="نعناع فلفلي">نعناع فلفلي</option>
+                    <option value="كزبرة">كزبرة</option>
+                    <option value="بقدونس">بقدونس</option>
+                    <option value="كمون">كمون</option>
+                    <option value="حلبة">حلبة</option>
+                    <option value="شبت">شبت</option>
+                    <option value="زعفران">زعفران</option>
+                    <option value="أوريجانو">أوريجانو</option>
+                    <option value="ريحان">ريحان</option>
+                    <option value="ليمونية">ليمونية</option>
+                    <option value="لافندر">لافندر</option>
+                    <option value="جرانيوم">جرانيوم</option>
+                    <option value="بيغونيا">بيغونيا</option>
+                    <option value="كاميليا">كاميليا</option>
+                    <option value="فوشيا">فوشيا</option>
+                    <option value="أقحوان">أقحوان</option>
+                    <option value="بنفسج">بنفسج</option>
+                    <option value="زنبق">زنبق</option>
+                    <option value="توليب">توليب</option>
+                    <option value="زنجبيل">زنجبيل</option>
+                    <option value="كركم">كركم</option>
+                    <option value="ريحان مقدس">ريحان مقدس</option>
+                    <option value="ليمونية">ليمونية</option>
+                    <option value="زعتر">زعتر</option>
+                    <option value="إكليل الجبل">إكليل الجبل</option>
+                    <option value="نعناع فلفلي">نعناع فلفلي</option>
+                    <option value="كزبرة">كزبرة</option>
+                    <option value="بقدونس">بقدونس</option>
+                </optgroup>
+                
+<!-- النباتات الزينة -->
+<optgroup label="النباتات الزينة">
+<option value="الكركديه">الكركديه</option>
+<option value="الجهنمية">الجهنمية</option>
+<option value="الفرانجيباني">الفرانجيباني</option>
+<option value="اللانتانا">اللانتانا</option>
+<option value="وردة الصحراء">وردة الصحراء</option>
+<option value="الياسمين">الياسمين</option>
+<option value="الخزامى">الخزامى</option>
+<option value="إبرة الراعي">إبرة الراعي</option>
+<option value="البيغونيا">البيغونيا</option>
+<option value="الكاميليا">الكاميليا</option>
+<option value="الفوشيا">الفوشيا</option>
+<option value="الأقحوان">الأقحوان</option>
+<option value="البنفسج">البنفسج</option>
+<option value="الزنبق">الزنبق</option>
+<option value="التوليب">التوليب</option>
+<option value="السوسن">السوسن</option>
+<option value="الداليا">الداليا</option>
+<option value="الفريزيا">الفريزيا</option>
+<option value="الفاوانيا">الفاوانيا</option>
+<option value="الكونوس">الكونوس</option>
+<option value="النرجس">النرجس</option>
+<option value="البنفسج الثلاثي">البنفسج الثلاثي</option>
+<option value="الكانا">الكانا</option>
+<option value="الزهرة الربيعية">الزهرة الربيعية</option>
+<option value="الميموزا">الميموزا</option>
+<option value="الورد">الورد</option>
+<option value="إبرة الراعي العطرة">إبرة الراعي العطرة</option>
+<option value="الليلك">الليلك</option>
+<option value="البتونيا">البتونيا</option>
+</optgroup>
+
+<!-- نباتات المنازل -->
+<optgroup label="نباتات المنازل">
+<option value="النخيل">النخيل</option>
+<option value="الموز">الموز</option>
+<option value="جوز الهند">جوز الهند</option>
+<option value="الأفوكادو">الأفوكادو</option>
+<option value="البابايا">البابايا</option>
+<option value="الليمون">الليمون</option>
+<option value="البرتقال">البرتقال</option>
+<option value="اليوسفي">اليوسفي</option>
+<option value="الجريب فروت">الجريب فروت</option>
+<option value="الرمان">الرمان</option>
+<option value="المانجو">المانجو</option>
+<option value="الجوافة">الجوافة</option>
+<option value="الخروب">الخروب</option>
+<option value="الأسكدنيا">الأسكدنيا</option>
+<option value="السدر">السدر</option>
+<option value="القشطة">القشطة</option>
+<option value="الليتشي">الليتشي</option>
+<option value="اللونجان">اللونجان</option>
+<option value="التين">التين</option>
+<option value="الخوخ">الخوخ</option>
+<option value="المشمش">المشمش</option>
+<option value="الكرز الاستوائي">الكرز الاستوائي</option>
+<option value="الكاكاو">الكاكاو</option>
+<option value="الجوز الأسترالي">الجوز الأسترالي</option>
+<option value="الزيتون الأفريقي">الزيتون الأفريقي</option>
+<option value="الباوباب">الباوباب</option>
+<option value="المارولا">المارولا</option>
+</optgroup>
+
+<!-- النباتات البرية الصالحة للأكل -->
+<optgroup label="النباتات البرية الصالحة للأكل">
+<option value="توت البلسان">توت البلسان</option>
+<option value="أوراق الباوباب">أوراق الباوباب</option>
+<option value="ثمار التمر الهندي">ثمار التمر الهندي</option>
+<option value="أوراق المورينغا">أوراق المورينغا</option>
+<option value="ثمار السدر">ثمار السدر</option>
+<option value="جذور الكسافا البرية">جذور الكسافا البرية</option>
+<option value="أوراق الحميض">أوراق الحميض</option>
+<option value="ثمار شجرة الشيا">ثمار شجرة الشيا</option>
+<option value="أوراق الليمون">أوراق الليمون</option>
+<option value="ثمار نخيل الزيت">ثمار نخيل الزيت</option>
+<option value="جوز الشيا">جوز الشيا</option>
+<option value="تمر النخيل الصحراوي">تمر النخيل الصحراوي</option>
+<option value="بذور النيري">بذور النيري</option>
+<option value="أوراق الكسافا">أوراق الكسافا</option>
+<option value="ثمار شجرة الخبز">ثمار شجرة الخبز</option>
+<option value="درنات اليام البري">درنات اليام البري</option>
+<option value="بذور اللوتس">بذور اللوتس</option>
+<option value="ثمار المارولا">ثمار المارولا</option>
+<option value="ثمار الزيتون الأفريقي">ثمار الزيتون الأفريقي</option>
+<option value="أوراق البطاطا الحلوة البرية">أوراق البطاطا الحلوة البرية</option>
+<option value="بذور البطيخ البري">بذور البطيخ البري</option>
+<option value="ثمار وردة النسرين">ثمار وردة النسرين</option>
+<option value="ثمار شجرة الأرغان">ثمار شجرة الأرغان</option>
+<option value="براعم الخيزران الصغيرة">براعم الخيزران الصغيرة</option>
+<option value="بذور الباوباب">بذور الباوباب</option>
+<option value="جذور الهندباء">جذور الهندباء</option>
+<option value="ثمار المنسينيل (سام بدون تحضير)">ثمار المنسينيل (سام بدون تحضير)</option>
+<option value="جوز الكولا">جوز الكولا</option>
+<option value="بذور التمر الهندي">بذور التمر الهندي</option>
+<option value="ثمار شجرة القطلب">ثمار شجرة القطلب</option>
+<option value="ثمار التوت البري">ثمار التوت البري</option>
+</optgroup>
+                    </select>
+
+                        <!-- Ajouter 200+ autres plantes ici -->
+                    </select>
+
+                    <label for="climate">مناخ المنطقة</label>
+                    <select id="climate">
+                        <option value="استوائي">استوائي</option>
+                        <option value="جاف">جاف</option>
+                        <option value="معتدل">معتدل</option>
+                        <option value="جبلي">جبلي</option>
+                        <option value="شبه جاف">شبه جاف</option>
+                    </select>
+
+                    <label for="soil-type">نوع التربة</label>
+                    <select id="soil-type">
+                        <option value="رملي">رملي</option>
+                        <option value="طيني">طيني</option>
+                        <option value="غريني">غريني</option>
+                    </select>
+
+                    <button type="submit">حساب الري</button>
+                </form>
+
+                <div class="result" id="result-container" style="display: none;">
+                    <p id="result-text"></p>
+                </div>
+            </div>
+        </main>
+
+        <script>
+const plantDatabase = {
+    'Maïs': { base: 20, climateFactor: 1.2, soilFactor: 0.9 },
+    'Sorgho': { base: 15, climateFactor: 0.9, soilFactor: 1.0 },
+    'Millet perlé': { base: 18, climateFactor: 1.1, soilFactor: 0.8 },
+    'Fonio noir': { base: 12, climateFactor: 1.3, soilFactor: 0.7 },
+    'Teff': { base: 14, climateFactor: 1.0, soilFactor: 0.9 },
+    'Riz de mangrove': { base: 22, climateFactor: 1.4, soilFactor: 1.1 },
+    'Éleusine': { base: 16, climateFactor: 1.2, soilFactor: 0.8 },
+    'Blé dur': { base: 19, climateFactor: 1.1, soilFactor: 1.0 },
+    'Orge': { base: 17, climateFactor: 1.0, soilFactor: 1.1 },
+    'Avoine': { base: 15, climateFactor: 0.9, soilFactor: 1.2 },
+    'Riz basmati': { base: 21, climateFactor: 1.3, soilFactor: 1.0 },
+    'Riz jasmin': { base: 20, climateFactor: 1.4, soilFactor: 0.9 },
+    'Riz rouge': { base: 18, climateFactor: 1.2, soilFactor: 1.1 },
+    'Riz noir': { base: 17, climateFactor: 1.1, soilFactor: 1.0 },
+    'Petit épeautre': { base: 14, climateFactor: 1.0, soilFactor: 0.9 },
+    'Grand épeautre': { base: 15, climateFactor: 1.1, soilFactor: 1.0 },
+    'Amarante': { base: 13, climateFactor: 1.2, soilFactor: 0.8 },
+    'Quinoa blanc': { base: 16, climateFactor: 1.3, soilFactor: 1.1 },
+    'Quinoa rouge': { base: 17, climateFactor: 1.2, soilFactor: 1.0 },
+    'Quinoa noir': { base: 18, climateFactor: 1.1, soilFactor: 0.9 },
+    'Blé tendre': { base: 19, climateFactor: 1.0, soilFactor: 1.1 },
+    'Kamut': { base: 15, climateFactor: 1.1, soilFactor: 0.9 },
+    'Sarrasin': { base: 14, climateFactor: 1.2, soilFactor: 1.0 },
+    'Seigle': { base: 16, climateFactor: 1.0, soilFactor: 1.2 },
+    'Farro': { base: 13, climateFactor: 1.1, soilFactor: 0.8 },
+    'Triticale': { base: 17, climateFactor: 1.2, soilFactor: 1.0 },
+    'Blé khorasan': { base: 18, climateFactor: 1.1, soilFactor: 0.9 },
+    'Millet commun': { base: 12, climateFactor: 1.3, soilFactor: 0.7 },
+    'Millet japonais': { base: 13, climateFactor: 1.2, soilFactor: 0.8 },
+    'Millet indien': { base: 14, climateFactor: 1.1, soilFactor: 0.9 },
+    'Fonio blanc': { base: 11, climateFactor: 1.3, soilFactor: 0.7 },
+    'Blé turc': { base: 16, climateFactor: 1.0, soilFactor: 1.1 },
+    'Orge perlé': { base: 17, climateFactor: 1.1, soilFactor: 0.9 },
+    'Orge mondé': { base: 18, climateFactor: 1.2, soilFactor: 1.0 },
+    'Avoine nue': { base: 15, climateFactor: 0.9, soilFactor: 1.2 },
+    'Einkorn': { base: 14, climateFactor: 1.0, soilFactor: 0.8 },
+    'Niébé': { base: 12, climateFactor: 1.2, soilFactor: 1.0 },
+    'Pois bambara': { base: 14, climateFactor: 1.1, soilFactor: 1.2 },
+    'Voandzou': { base: 13, climateFactor: 1.3, soilFactor: 1.1 },
+    'Dolique': { base: 15, climateFactor: 1.0, soilFactor: 1.0 },
+    'Pois d\'Angole': { base: 16, climateFactor: 1.1, soilFactor: 1.2 },
+    'Lentille de terre': { base: 11, climateFactor: 1.2, soilFactor: 0.9 },
+    'Haricot mungo': { base: 13, climateFactor: 1.3, soilFactor: 1.1 },
+    'Pois cajan': { base: 14, climateFactor: 1.2, soilFactor: 1.0 },
+    'Fève': { base: 17, climateFactor: 1.0, soilFactor: 1.3 },
+    'Pois chiche': { base: 16, climateFactor: 1.1, soilFactor: 1.0 },
+    'Lentille verte': { base: 12, climateFactor: 1.2, soilFactor: 0.9 },
+    'Lentille corail': { base: 13, climateFactor: 1.2, soilFactor: 1.0 },
+    'Lentille brune': { base: 12, climateFactor: 1.1, soilFactor: 1.0 },
+    'Lupin': { base: 14, climateFactor: 1.1, soilFactor: 1.2 },
+    'Haricot rouge': { base: 15, climateFactor: 1.0, soilFactor: 1.1 },
+    'Haricot noir': { base: 14, climateFactor: 1.2, soilFactor: 1.0 },
+    'Haricot blanc': { base: 13, climateFactor: 1.1, soilFactor: 1.1 },
+    'Haricot pinto': { base: 14, climateFactor: 1.1, soilFactor: 1.0 },
+    'Haricot borlotti': { base: 13, climateFactor: 1.0, soilFactor: 1.1 },
+    'Fénugrec': { base: 12, climateFactor: 1.2, soilFactor: 1.0 },
+    'Soja': { base: 15, climateFactor: 1.3, soilFactor: 1.1 },
+    'Gesse': { base: 14, climateFactor: 1.1, soilFactor: 1.0 },
+    'Trèfle souterrain': { base: 11, climateFactor: 1.1, soilFactor: 1.0 },
+    'Arachide': { base: 16, climateFactor: 1.2, soilFactor: 1.1 },
+    'Fenugrec': { base: 12, climateFactor: 1.2, soilFactor: 1.0 },
+    'Pois cassé': { base: 13, climateFactor: 1.1, soilFactor: 1.0 },
+    'Manioc': { base: 10, climateFactor: 0.7, soilFactor: 1.0 },
+    'Igname ailée': { base: 9, climateFactor: 0.8, soilFactor: 1.1 },
+    'Taro géant': { base: 11, climateFactor: 1.1, soilFactor: 0.9 },
+    'Patate douce orange': { base: 8, climateFactor: 0.9, soilFactor: 1.0 },
+    'Colocase': { base: 9.5, climateFactor: 1.0, soilFactor: 0.95 },
+    'Macabo': { base: 10.2, climateFactor: 0.85, soilFactor: 1.05 },
+    'Igname de Chine': { base: 8.8, climateFactor: 0.75, soilFactor: 1.1 },
+    'Patate douce violette': { base: 8.5, climateFactor: 0.88, soilFactor: 1.05 },
+    'Igname d\'eau': { base: 12, climateFactor: 1.2, soilFactor: 0.8 },
+    'Taro violet': { base: 10.5, climateFactor: 1.05, soilFactor: 0.9 },
+    'Igname blanche': { base: 9.2, climateFactor: 0.78, soilFactor: 1.08 },
+    'Patate douce blanche': { base: 7.8, climateFactor: 0.92, soilFactor: 1.02 },
+    'Igname rouge': { base: 9.5, climateFactor: 0.85, soilFactor: 1.1 },
+    'Patate douce jaune': { base: 8.2, climateFactor: 0.89, soilFactor: 1.03 },
+    'Igname sauvage': { base: 7.5, climateFactor: 0.7, soilFactor: 1.15 },
+    'Patate douce pourpre': { base: 8.7, climateFactor: 0.91, soilFactor: 1.04 },
+    'Igname jaune': { base: 9.8, climateFactor: 0.82, soilFactor: 1.07 },
+    'Patate douce rouge': { base: 8.3, climateFactor: 0.87, soilFactor: 1.06 },
+    'Igname violette': { base: 10.1, climateFactor: 0.79, soilFactor: 1.09 },
+    'Patate douce noire': { base: 7.9, climateFactor: 0.93, soilFactor: 1.01 },
+    'Igname à chair jaune': { base: 9.3, climateFactor: 0.81, soilFactor: 1.12 },
+    'Patate douce à chair blanche': { base: 8.1, climateFactor: 0.86, soilFactor: 1.05 },
+    'Igname à chair rouge': { base: 9.7, climateFactor: 0.83, soilFactor: 1.11 },
+    'Patate douce à chair orange': { base: 8.4, climateFactor: 0.9, soilFactor: 1.03 },
+    'Igname à chair violette': { base: 10.3, climateFactor: 0.77, soilFactor: 1.13 },
+    'Patate douce à chair rose': { base: 8.6, climateFactor: 0.88, soilFactor: 1.04 },
+    'Igname à chair blanche': { base: 9.4, climateFactor: 0.8, soilFactor: 1.1 },
+    'Patate douce à chair jaune': { base: 8.0, climateFactor: 0.89, soilFactor: 1.02 },
+    'Igname à chair orange': { base: 9.6, climateFactor: 0.84, soilFactor: 1.09 },
+    'Patate douce à chair violette': { base: 8.9, climateFactor: 0.91, soilFactor: 1.06 },
+    'Baobab': { base: 5, climateFactor: 1.3, soilFactor: 0.8 },
+    'Karité': { base: 6, climateFactor: 1.2, soilFactor: 0.7 },
+    'Manguier': { base: 15, climateFactor: 1.1, soilFactor: 1.0 },
+    'Papayer africain': { base: 12, climateFactor: 1.0, soilFactor: 1.0 },
+    'Goyavier du Sénégal': { base: 11, climateFactor: 0.95, soilFactor: 1.05 },
+    'Jujubier': { base: 4, climateFactor: 1.4, soilFactor: 0.6 },
+    'Anacardier': { base: 9, climateFactor: 1.1, soilFactor: 0.9 },
+    'Palmier à huile': { base: 13, climateFactor: 1.15, soilFactor: 0.85 },
+    'Dattier': { base: 10, climateFactor: 1.3, soilFactor: 0.75 },
+    'Citronnier': { base: 8, climateFactor: 1.0, soilFactor: 1.0 },
+    'Grenadier': { base: 7, climateFactor: 1.05, soilFactor: 0.95 },
+    'Avocatier': { base: 14, climateFactor: 1.1, soilFactor: 0.9 },
+    'Mandarinier': { base: 9, climateFactor: 0.95, soilFactor: 1.05 },
+    'Pamplemoussier': { base: 10, climateFactor: 1.0, soilFactor: 1.0 },
+    'Figuier': { base: 6, climateFactor: 1.2, soilFactor: 0.8 },
+    'Goyavier': { base: 8, climateFactor: 0.9, soilFactor: 1.1 },
+    'Prunier africain': { base: 7, climateFactor: 1.0, soilFactor: 1.0 },
+    'Pêcher africain': { base: 8, climateFactor: 0.95, soilFactor: 1.05 },
+    'Abricotier': { base: 7.5, climateFactor: 1.1, soilFactor: 0.9 },
+    'Cerisier africain': { base: 6.5, climateFactor: 1.15, soilFactor: 0.85 },
+    'Pistachier': { base: 5, climateFactor: 1.3, soilFactor: 0.7 },
+    'Amandier': { base: 6, climateFactor: 1.2, soilFactor: 0.8 },
+    'Cacaoyer': { base: 12, climateFactor: 1.1, soilFactor: 0.9 },
+    'Caféier': { base: 10, climateFactor: 1.0, soilFactor: 1.0 },
+    'Bananiers': { base: 18, climateFactor: 1.2, soilFactor: 0.9 },
+    'Ananas': { base: 9, climateFactor: 1.05, soilFactor: 1.0 },
+    'Goyave de Chine': { base: 8.5, climateFactor: 0.95, soilFactor: 1.05 },
+    'Citronnelle': { base: 4, climateFactor: 1.4, soilFactor: 0.6 },
+    'Grenadier nain': { base: 5, climateFactor: 1.3, soilFactor: 0.7 },
+    'Palmier dattier nain': { base: 8, climateFactor: 1.1, soilFactor: 0.9 },
+    'Morelle noire': { base: 4, climateFactor: 0.9, soilFactor: 1.1 },
+    'Oseille de Guinée': { base: 5, climateFactor: 1.0, soilFactor: 1.0 },
+    'Laitue du désert': { base: 6, climateFactor: 0.8, soilFactor: 1.2 },
+    'Amarante rouge': { base: 5.5, climateFactor: 0.85, soilFactor: 1.05 },
+    'Aubergine amère': { base: 7, climateFactor: 0.95, soilFactor: 1.1 },
+    'Gombo': { base: 8, climateFactor: 1.0, soilFactor: 1.0 },
+    'Courge africaine': { base: 9, climateFactor: 0.9, soilFactor: 1.1 },
+    'Tomate locale': { base: 10, climateFactor: 1.0, soilFactor: 0.9 },
+    'Piment africain': { base: 7, climateFactor: 1.1, soilFactor: 0.8 },
+    'Oignon africain': { base: 6, climateFactor: 0.95, soilFactor: 1.05 },
+    'Épinards africains': { base: 5, climateFactor: 0.9, soilFactor: 1.1 },
+    'Chou africain': { base: 7, climateFactor: 1.0, soilFactor: 1.0 },
+    'Carotte africaine': { base: 6.5, climateFactor: 0.95, soilFactor: 1.05 },
+    'Betterave africaine': { base: 7.2, climateFactor: 0.9, soilFactor: 1.1 },
+    'Poivron africain': { base: 8, climateFactor: 1.0, soilFactor: 0.9 },
+    'Concombre africain': { base: 9, climateFactor: 0.95, soilFactor: 1.05 },
+    'Courgette africaine': { base: 8.5, climateFactor: 0.9, soilFactor: 1.1 },
+    'Haricot vert africain': { base: 7, climateFactor: 1.0, soilFactor: 1.0 },
+    'Pois africain': { base: 6, climateFactor: 0.95, soilFactor: 1.05 },
+    'Lentille africaine': { base: 5.5, climateFactor: 0.9, soilFactor: 1.1 },
+    'Fève africaine': { base: 6.8, climateFactor: 1.0, soilFactor: 1.0 },
+    'Radis africain': { base: 5, climateFactor: 0.95, soilFactor: 1.05 },
+    'Navet africain': { base: 6, climateFactor: 0.9, soilFactor: 1.1 },
+    'Céleri africain': { base: 7, climateFactor: 1.0, soilFactor: 1.0 },
+    'Persil africain': { base: 5.5, climateFactor: 0.95, soilFactor: 1.05 },
+    'Coriandre africaine': { base: 6, climateFactor: 0.9, soilFactor: 1.1 },
+    'Basilic africain': { base: 5, climateFactor: 1.0, soilFactor: 1.0 },
+    'Thym africain': { base: 4.5, climateFactor: 0.95, soilFactor: 1.05 },
+    'Romarin africain': { base: 5, climateFactor: 0.9, soilFactor: 1.1 },
+    'Menthe africaine': { base: 6, climateFactor: 1.0, soilFactor: 1.0 },
+    'Artemisia': { base: 3, climateFactor: 0.9, soilFactor: 1.0 },
+    'Griffonia': { base: 4, climateFactor: 1.05, soilFactor: 0.95 },
+    'Kinkeliba': { base: 4.5, climateFactor: 1.1, soilFactor: 0.85 },
+    'Moringa': { base: 7, climateFactor: 1.1, soilFactor: 0.9 },
+    'Aloe vera': { base: 2, climateFactor: 1.3, soilFactor: 0.7 },
+    'Neem': { base: 5, climateFactor: 1.2, soilFactor: 0.8 },
+    'Gingembre': { base: 6, climateFactor: 1.0, soilFactor: 1.0 },
+    'Curcuma': { base: 5.5, climateFactor: 0.95, soilFactor: 1.05 },
+    'Basilic sacré': { base: 4, climateFactor: 0.9, soilFactor: 1.1 },
+    'Citronnelle': { base: 3.5, climateFactor: 1.4, soilFactor: 0.6 },
+    'Thym': { base: 3, climateFactor: 0.8, soilFactor: 1.1 },
+    'Romarin': { base: 2.5, climateFactor: 0.75, soilFactor: 1.2 },
+    'Menthe poivrée': { base: 4, climateFactor: 0.9, soilFactor: 1.0 },
+    'Coriandre': { base: 3.8, climateFactor: 0.85, soilFactor: 1.05 },
+    'Persil': { base: 3.5, climateFactor: 0.88, soilFactor: 1.0 },
+    'Cumin': { base: 3.2, climateFactor: 0.9, soilFactor: 1.1 },
+    'Fenugrec': { base: 3.7, climateFactor: 0.85, soilFactor: 1.05 },
+    'Aneth': { base: 3.4, climateFactor: 0.88, soilFactor: 1.0 },
+    'Safran': { base: 3.1, climateFactor: 0.9, soilFactor: 1.1 },
+    'Origan': { base: 3.3, climateFactor: 0.87, soilFactor: 1.05 },
+    'Camomille': { base: 2.8, climateFactor: 0.9, soilFactor: 1.0 },
+    'Lavande': { base: 3.0, climateFactor: 0.85, soilFactor: 1.1 },
+    'Géranium': { base: 3.2, climateFactor: 0.88, soilFactor: 1.0 },
+    'Bégonia': { base: 3.1, climateFactor: 0.9, soilFactor: 1.1 },
+    'Camélia': { base: 3.3, climateFactor: 0.87, soilFactor: 1.05 },
+    'Fuchsia': { base: 3.4, climateFactor: 0.88, soilFactor: 1.0 },
+    'Chrysanthème': { base: 3.5, climateFactor: 0.9, soilFactor: 1.1 },
+    'Violet': { base: 3.6, climateFactor: 0.85, soilFactor: 1.05 },
+    'Lys': { base: 3.7, climateFactor: 0.88, soilFactor: 1.0 },
+    'Tulipe': { base: 3.8, climateFactor: 0.9, soilFactor: 1.1 },
+    'Thym': { base: 3, climateFactor: 0.8, soilFactor: 1.1 },
+    'Romarin': { base: 2.5, climateFactor: 0.75, soilFactor: 1.2 },
+    'Menthe poivrée': { base: 4, climateFactor: 0.9, soilFactor: 1.0 },
+    'Coriandre': { base: 3.8, climateFactor: 0.85, soilFactor: 1.05 },
+    'Persil': { base: 3.5, climateFactor: 0.88, soilFactor: 1.0 },
+    'Cumin': { base: 3.2, climateFactor: 0.9, soilFactor: 1.1 },
+    'Fenugrec': { base: 3.7, climateFactor: 0.85, soilFactor: 1.05 },
+    'Aneth': { base: 3.4, climateFactor: 0.88, soilFactor: 1.0 },
+    'Safran': { base: 3.1, climateFactor: 0.9, soilFactor: 1.1 },
+    'Origan': { base: 3.3, climateFactor: 0.87, soilFactor: 1.05 },
+    'Basilic': { base: 4, climateFactor: 0.9, soilFactor: 1.0 },
+    'Citronnelle': { base: 3.5, climateFactor: 1.4, soilFactor: 0.6 },
+    'Lavande': { base: 3.0, climateFactor: 0.85, soilFactor: 1.1 },
+    'Géranium': { base: 3.2, climateFactor: 0.88, soilFactor: 1.0 },
+    'Bégonia': { base: 3.1, climateFactor: 0.9, soilFactor: 1.1 },
+    'Camélia': { base: 3.3, climateFactor: 0.87, soilFactor: 1.05 },
+    'Fuchsia': { base: 3.4, climateFactor: 0.88, soilFactor: 1.0 },
+    'Chrysanthème': { base: 3.5, climateFactor: 0.9, soilFactor: 1.1 },
+    'Violet': { base: 3.6, climateFactor: 0.85, soilFactor: 1.05 },
+    'Lys': { base: 3.7, climateFactor: 0.88, soilFactor: 1.0 },
+    'Tulipe': { base: 3.8, climateFactor: 0.9, soilFactor: 1.1 },
+    'Gingembre': { base: 6, climateFactor: 1.0, soilFactor: 1.0 },
+    'Curcuma': { base: 5.5, climateFactor: 0.95, soilFactor: 1.05 },
+    'Basilic sacré': { base: 4, climateFactor: 0.9, soilFactor: 1.1 },
+    'Citronnelle': { base: 3.5, climateFactor: 1.4, soilFactor: 0.6 },
+    'Thym': { base: 3, climateFactor: 0.8, soilFactor: 1.1 },
+    'Romarin': { base: 2.5, climateFactor: 0.75, soilFactor: 1.2 },
+    'Menthe poivrée': { base: 4, climateFactor: 0.9, soilFactor: 1.0 },
+    'Coriandre': { base: 3.8, climateFactor: 0.85, soilFactor: 1.05 },
+    'Persil': { base: 3.5, climateFactor: 0.88, soilFactor: 1.0 },
+    'Hibiscus': { base: 6, climateFactor: 1.0, soilFactor: 1.0 },
+    'Bougainvillier': { base: 5, climateFactor: 1.1, soilFactor: 0.9 },
+    'Frangipanier': { base: 7, climateFactor: 1.05, soilFactor: 0.95 },
+    'Lantanier': { base: 6.5, climateFactor: 1.0, soilFactor: 1.0 },
+    'Rose du désert': { base: 4, climateFactor: 1.3, soilFactor: 0.7 },
+    'Jasmin': { base: 5, climateFactor: 0.9, soilFactor: 1.1 },
+    'Lavande': { base: 3, climateFactor: 0.85, soilFactor: 1.15 },
+    'Géranium': { base: 4, climateFactor: 0.9, soilFactor: 1.1 },
+    'Bégonia': { base: 5, climateFactor: 0.95, soilFactor: 1.05 },
+    'Camélia': { base: 6, climateFactor: 1.0, soilFactor: 1.0 },
+    'Fuchsia': { base: 5.5, climateFactor: 0.95, soilFactor: 1.05 },
+    'Chrysanthème': { base: 4.5, climateFactor: 0.9, soilFactor: 1.1 },
+    'Violet': { base: 3.5, climateFactor: 0.85, soilFactor: 1.15 },
+    'Lys': { base: 6, climateFactor: 1.0, soilFactor: 1.0 },
+    'Tulipe': { base: 5, climateFactor: 0.95, soilFactor: 1.05 },
+    'Glaïeul': { base: 6.5, climateFactor: 1.0, soilFactor: 1.0 },
+    'Iris': { base: 5.5, climateFactor: 0.95, soilFactor: 1.05 },
+    'Dahlia': { base: 6, climateFactor: 1.0, soilFactor: 1.0 },
+    'Freesia': { base: 5, climateFactor: 0.95, soilFactor: 1.05 },
+    'Pivoine': { base: 6.5, climateFactor: 1.0, soilFactor: 1.0 },
+    'Cosmos': { base: 5, climateFactor: 0.95, soilFactor: 1.05 },
+    'Narcisse': { base: 4.5, climateFactor: 0.9, soilFactor: 1.1 },
+    'Pensée': { base: 3.5, climateFactor: 0.85, soilFactor: 1.15 },
+    'Canna': { base: 6, climateFactor: 1.0, soilFactor: 1.0 },
+    'Primevère': { base: 5, climateFactor: 0.95, soilFactor: 1.05 },
+    'Mimosa': { base: 6.5, climateFactor: 1.0, soilFactor: 1.0 },
+    'Rose': { base: 7, climateFactor: 1.05, soilFactor: 0.95 },
+    'Géranium rosat': { base: 4, climateFactor: 0.9, soilFactor: 1.1 },
+    'Lilas': { base: 5, climateFactor: 0.95, soilFactor: 1.05 },
+    'Pétunia': { base: 4.5, climateFactor: 0.9, soilFactor: 1.1 },
+    'Palmier dattier': { base: 20, climateFactor: 1.3, soilFactor: 1.1 },
+    'Bananiers': { base: 18, climateFactor: 1.4, soilFactor: 1.2 },
+    'Cocotier': { base: 22, climateFactor: 1.5, soilFactor: 1.1 },
+    'Avocatier': { base: 19, climateFactor: 1.2, soilFactor: 1.3 },
+    'Papayer': { base: 17, climateFactor: 1.4, soilFactor: 1.2 },
+    'Citronnier': { base: 16, climateFactor: 1.1, soilFactor: 1.0 },
+    'Oranger': { base: 17, climateFactor: 1.2, soilFactor: 1.1 },
+    'Mandarinier': { base: 18, climateFactor: 1.3, soilFactor: 1.1 },
+    'Pamplemoussier': { base: 19, climateFactor: 1.2, soilFactor: 1.2 },
+    'Grenadier': { base: 15, climateFactor: 1.1, soilFactor: 1.0 },
+    'Manguier': { base: 21, climateFactor: 1.3, soilFactor: 1.1 },
+    'Goyavier': { base: 18, climateFactor: 1.2, soilFactor: 1.1 },
+    'Caroubier': { base: 14, climateFactor: 1.1, soilFactor: 1.2 },
+    'Néflier': { base: 15, climateFactor: 1.2, soilFactor: 1.1 },
+    'Jujubier': { base: 16, climateFactor: 1.3, soilFactor: 1.0 },
+    'Corossolier': { base: 18, climateFactor: 1.3, soilFactor: 1.2 },
+    'Litchi': { base: 19, climateFactor: 1.3, soilFactor: 1.1 },
+    'Longanier': { base: 17, climateFactor: 1.2, soilFactor: 1.1 },
+    'Annonier': { base: 16, climateFactor: 1.2, soilFactor: 1.1 },
+    'Chérimolier': { base: 15, climateFactor: 1.3, soilFactor: 1.0 },
+    'Figuier': { base: 20, climateFactor: 1.1, soilFactor: 1.2 },
+    'Pêcher': { base: 14, climateFactor: 1.1, soilFactor: 1.1 },
+    'Abricotier': { base: 13, climateFactor: 1.2, soilFactor: 1.0 },
+    'Cerisier tropical': { base: 15, climateFactor: 1.2, soilFactor: 1.1 },
+    'Cacaoyer': { base: 18, climateFactor: 1.4, soilFactor: 1.3 },
+    'Noyer du Queensland': { base: 19, climateFactor: 1.3, soilFactor: 1.2 },
+    'Safoutier': { base: 17, climateFactor: 1.3, soilFactor: 1.2 },
+    'Baobab': { base: 20, climateFactor: 1.1, soilFactor: 1.3 },
+    'Marula': { base: 18, climateFactor: 1.2, soilFactor: 1.2 },
+    'Baies de sureau': { base: 12, climateFactor: 1.2, soilFactor: 1.1 },
+    'Feuilles de baobab': { base: 15, climateFactor: 1.3, soilFactor: 1.2 },
+    'Fruits du tamarinier': { base: 18, climateFactor: 1.4, soilFactor: 1.1 },
+    'Feuilles de moringa': { base: 16, climateFactor: 1.3, soilFactor: 1.2 },
+    'Fruits du jujubier': { base: 14, climateFactor: 1.2, soilFactor: 1.1 },
+    'Racines de manioc sauvage': { base: 20, climateFactor: 1.1, soilFactor: 1.3 },
+    'Feuilles d\'oseille': { base: 13, climateFactor: 1.2, soilFactor: 1.0 },
+    'Fruits du karité': { base: 17, climateFactor: 1.4, soilFactor: 1.2 },
+    'Feuilles de citronnelle': { base: 12, climateFactor: 1.1, soilFactor: 1.0 },
+    'Fruits du palmier à huile': { base: 19, climateFactor: 1.5, soilFactor: 1.1 },
+    'Noix du karité': { base: 16, climateFactor: 1.2, soilFactor: 1.1 },
+    'Fruits du dattier du désert': { base: 18, climateFactor: 1.3, soilFactor: 1.1 },
+    'Graines de néré': { base: 14, climateFactor: 1.3, soilFactor: 1.2 },
+    'Feuilles de manioc': { base: 15, climateFactor: 1.2, soilFactor: 1.0 },
+    'Fruits de l\'arbre à pain': { base: 19, climateFactor: 1.4, soilFactor: 1.1 },
+    'Tubercules d\'igname sauvage': { base: 20, climateFactor: 1.2, soilFactor: 1.3 },
+    'Graines de lotus': { base: 14, climateFactor: 1.1, soilFactor: 1.2 },
+    'Fruits du marula': { base: 18, climateFactor: 1.2, soilFactor: 1.2 },
+    'Fruits du safoutier': { base: 17, climateFactor: 1.3, soilFactor: 1.2 },
+    'Feuilles de patate douce sauvage': { base: 16, climateFactor: 1.2, soilFactor: 1.0 },
+    'Graines de pastèque sauvage': { base: 13, climateFactor: 1.1, soilFactor: 1.2 },
+    'Baies de l’argousier': { base: 14, climateFactor: 1.3, soilFactor: 1.1 },
+    'Fruits du baobab': { base: 16, climateFactor: 1.3, soilFactor: 1.2 },
+    'Gousses du caroubier': { base: 14, climateFactor: 1.2, soilFactor: 1.0 },
+    'Feuilles de pourpier': { base: 12, climateFactor: 1.1, soilFactor: 1.0 },
+
+};
+
+            const climateFactors = {
+                'استوائي': 1.0,
+                'جاف': 1.4,
+                'معتدل': 0.9,
+                'جبلي': 0.8,
+                'شبه جاف': 1.2
+            };
+
+            const soilFactors = {
+                'رملي': 1.3,
+                'طيني': 0.9,
+                'غريني': 1.0
+            };
+
+            document.getElementById("irrigation-form").addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                const plant = document.getElementById("plant-name").value;
+                const climate = document.getElementById("climate").value;
+                const soil = document.getElementById("soil-type").value;
+
+                                const plantData = plantDatabase[plant] || { base: 15, climateFactor: 1.0, soilFactor: 1.0 };
+                                const totalWater = Math.round(
+                                    plantData.base * 
+                                    climateFactors[climate] * 
+                                    soilFactors[soil]
+                                );
+
+                                const resultText = `لزراعة ${plant} في مناخ ${climate} على تربة ${soil}، ` +
+                                                    `تقدر الحاجة إلى الماء بـ <strong>${totalWater} لترًا</strong> ` +
+                                                    `للهكتار الواحد في اليوم.`;
+
+                                document.getElementById("result-text").innerHTML = resultText;
+                                document.getElementById("result-container").style.display = "block";
+                            });
+                        </script>
+
+
+            <!-- bas de page -->
+            <body>
+                <footer>
+                    <div class="footer-header">
+                        <h3 class="mini-tilte-1">كيف يمكننا المساعدة؟</h3>
+                        <h3 class="mini-tilte-1">اتصل بنا في أي وقت</h3>
+                    </div>
+                    <div class="footer-contact">
+                        <div>
+                            <strong class="color-1">اتصل بنا:</strong>
+                            <a href="tel:+212674556060">+212 674 556 060</a>
+                        </div>
+                        <div>
+                            <strong class="color-1" >أرسل لنا رسالة:</strong>
+                            <a href="mailto:2025.agroterra@gmail.com">2025.agroterra@gmail.com</a>
+                        </div>
+                        <div>
+                            <strong class="color-1">تابعنا:</strong>
+                            <a href="https://web.facebook.com/profile.php?id=61570450615095&sk=about_contact_and_basic_info" class="social-icon"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/agro.terra.2025/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="https://x.com/2025Agro_terra" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/in/agro-terra-681b08340/recent-activity/all/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="footer-bottom">
+                        <img src="https://i.ibb.co/1YpQhZWb/Agro-Terra.png" alt="Agro-Terra Logo">
+                        <div class="footer-links">
+                            <a href="home-ar.html">الصفحة الرئيسية</a> |
+                            <a href="contacter-ar.html">معلومات عنا</a> |
+                            <a href="Conditions-de-services-ar.html">شروط الخدمة</a> |
+                            <a href="Politique-de-vie-privée-ar.html">سياسة الخصوصية</a> |
+                        </div>
+                    </div>
+                    <p class="copyright"> Copyright © Agro-Terra </p>
+                </footer>
+            </body>
+            </html>
+            
+
+
+
+        </section>
+    </body>
+
+<style>
+
+@import url(https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap);
+@import url(https://fonts.google.com/specimen/Abril+Fatface?query=abril&sidebar.open&selection.family=Abril+Fatface);
+@import url(https://fonts.google.com/specimen/Montserrat?query=monts);
+
+/* Général */
+body {
+    margin: 0 auto;
+}
+
+* {
+    font-family: Merriweather, sans-serif;
+}
+
+/* Section de la page d'accueil */
+.top-page {
+    background-image: url(https://i.ibb.co/vvMpQqmx/bg.png);
+    background-size: cover;
+    height: 70vh;
+    padding: 25px;
+}
+
+/* Header */
+header.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espacement entre le logo et la navigation */
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 20px 50px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 1000px;           /* Occupe 100% de la largeur du parent */
+    max-width: 1200px;     /* Largeur maximale du header */
+    position: relative;
+}
+
+
+/* Logo */
+header.header img {
+    margin: auto;
+    width: 70px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+header.header img:hover {
+    transform: scale(1.1);
+}
+
+/* Barre de navigation */
+.menu-style {
+    color: white;
+    text-decoration: none;
+}
+
+nav.nav {
+    display: flex;
+    margin: auto;
+    flex-direction: row; /* Aligne les éléments horizontalement */
+    justify-content: center; /* Centrer horizontalement la navigation */
+    align-items: center; /* Aligner verticalement */
+    list-style: none;
+    background: linear-gradient(90deg, #866a49e6, rgba(182, 142, 94, 0.9));
+    padding: 8px 30px; /* Réduire la hauteur en diminuant le padding vertical */
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+nav.nav li {
+    margin: 0 15px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav.nav li:hover {
+    color: rgba(255, 215, 0, 0.9); /* Couleur dorée au survol */
+    transform: scale(1.1);
+}
+
+nav.nav li.active {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+nav.nav li::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #ffd700;
+    transition: width 0.3s ease;
+    margin: 0 auto;
+}
+
+nav.nav li:hover::after {
+    width: 50%;
+}
+
+@import url(https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap);
+@import url(https://fonts.google.com/specimen/Abril+Fatface?query=abril&sidebar.open&selection.family=Abril+Fatface);
+@import url(https://fonts.google.com/specimen/Montserrat?query=monts);
+
+/* Styles généraux */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #787171c0;
+    padding: 30px 0;
+}
+
+.header-content {
+    display: flex;
+    max-width: 1200px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 40px;
+}
+
+.header-img {
+    flex: 1; /* Prend moins de place dans le cadre */
+    max-width: 250px; 
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-text {
+    margin-right: 20px;
+    margin-right: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+main {
+    margin: 50px 0;
+    padding: 0 20px;
+}
+
+.calculator-section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    display: block;
+    color: #555;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+select:focus {
+    border-color: #ffffff;
+    outline: none;
+}
+
+.btn {
+    padding: 15px 30px;
+    background-color: #c4b;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #644e35bb;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #644e35bb;
+    color: white;
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+
+#calculator-container {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #e5d5c8;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Début avec transparence totale */
+    transform: translateY(50px); /* Déplacé vers le bas */
+    animation: fadeInUp 1s ease-out forwards; /* Animation de fade-in */
+}
+
+h2 {
+    text-align: center;
+    color: #644e35bb;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font: Montserrat;
+    margin: 10px 0 5px;
+    color: #4a3721d8;
+}
+
+select, input, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    background-color: #53391b8f;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4a3721d8;
+}
+
+.result {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #bdae9cd8;
+    border-radius: 5px;
+    color: #333;
+}
+
+.result p {
+    margin: 5px 0;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #2e2115;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+            /* bas de page */
+
+    /* Style général pour le footer */
+    footer {
+        background: linear-gradient(100deg, #644e35bb, rgba(152, 114, 67, 0.635));
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        font-family: Arial, sans-serif;
+    }
+    
+    .footer-header {
+        margin-bottom: 20px;
+    }
+    
+    .footer-header h3 {
+        margin: 0;
+        font-size: 18px;
+    }
+    
+    .footer-header p {
+        font-size: 14px;
+        margin: 5px 0 0;
+    }
+    
+    .footer-contact div {
+        margin-bottom: 10px;
+    }
+    
+    footer a {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    footer a:hover {
+        text-decoration: underline;
+    }
+    
+    footer hr {
+        border: 0.5px solid rgba(0, 0, 0, 0.5);
+        margin: 20px 0;
+    }
+    
+    .footer-bottom img {
+        width: 100px;
+        margin-bottom: 10px;
+    }
+    
+    .footer-links a {
+        margin: 0 10px;
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .footer-links a:hover {
+        text-decoration: underline;
+    }
+    
+    /* Style pour les icônes des réseaux sociaux */
+    .social-icon {
+        margin: 0 5px;
+        font-size: 20px;
+    }
+    
+    
+    .social-icon:hover {
+        color: rgb(150, 85, 73);
+    }
+    
+    .color-1 {
+        color: rgb(88, 79, 67);
+    }
+    
+    .copyright {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #fff;
+        text-align: left;
+    }
+
+    /* Liste des langues */
+
+/* Conteneur du bouton et de la liste déroulante */
+.language-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Bouton principal */
+.language {
+    width: auto;
+    display: inline-flex;
+    justify-content: center;
+    background-color: #4e3e2a; /* Marron */
+    margin: auto;
+    margin-right: -35px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.language:hover {
+    background-color: #6a5533; /* Marron plus clair */
+    transform: scale(1.05); /* Zoom léger */
+}
+
+/* Liste déroulante */
+.language-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%; /* Position juste en dessous du bouton */
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    min-width: 150px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px); /* Déplacement initial */
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+/* Style des éléments de la liste */
+.language-menu li {
+    text-align: left;
+    animation: slide-in 0.4s ease forwards; /* Animation pour chaque élément */
+    opacity: 0; /* Caché avant l'animation */
+    transform: translateX(-10px); /* Décalage initial à gauche */
+}
+
+.language-menu li a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+/* Survol des liens */
+.language-menu li a:hover {
+    background-color: #f4f4f4;
+    color: #5a4633; /* Marron foncé */
+    transform: translateX(5px); /* Déplacement léger vers la droite */
+}
+
+/* Apparition de la liste déroulante */
+.language-dropdown:hover .language-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* Position d'apparition */
+}
+
+/* Activation des animations sur les éléments */
+.language-dropdown:hover .language-menu li {
+    opacity: 1; /* Rendre visible */
+    transform: translateX(0); /* Ramener en place */
+}
+
+/* Animation d'apparition pour les éléments */
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateX(-15px); /* Décalage vers la gauche */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); /* Position normale */
+    }
+}
+
+
+</style>
+</html>

@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conseils de Plantation</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"></script>
+</head>
+<body>
+    <!-- Menu -->
+<section class="top-page">
+    <header class="header">
+        <a href="home-ang.html" class="menu-style"><img src="https://i.ibb.co/1YpQhZWb/Agro-Terra.png" alt=""></a>
+        <nav class="nav">
+            <li><a href="home-ang.html" class="menu-style">Home</a></li>
+            <li><a href="Irrigation-ang.html" class="menu-style">Smart Irrigation</a></li>
+            <li><a href="Météo-ang.html" class="menu-style">Weather</a></li>
+            <li><a href="Conseille-ang.html" class="menu-style">Planting advice</a></li>
+            <li><a href="Croissance-ang.html" class="menu-style">Predictive Growth</a></li>
+            <li><a href="contacter-ang.html" class="menu-style">Contact us</a></li>
+        </nav>
+        <div class="language-dropdown">
+            <button class="language">Langue</button>
+            <ul class="language-menu">
+                <li><a href="Conseille.html">Français</a></li>
+                <li><a href="Conseille-ang.html">English</a></li>
+                <li><a href="Conseille-ar.html">العربية</a></li>
+            </ul>
+        </div>
+    </header>
+
+<header>
+    <div class="header-content">
+        <img src="https://i.ibb.co/Y4MvqqZq/Designer2.jpg" alt="Photo d'irrigation" class="header-img">
+        <div class="header-text">
+            <h1>Planting Tips</h1>
+            <p>Planting Tips is an interactive and intelligent feature designed to help farmers optimize their planting based on several personalized parameters. By combining modern technologies such as geolocation, real-time weather data, and best agricultural practices, this feature provides recommendations tailored to the user's specific conditions.</p>
+        </div>
+    </div>
+</header>
+
+<body class="advice">
+</head>
+<body>
+<div id="plantation-container">
+    <h1>Planting Tips</h1>
+    <form id="plantationForm">
+
+    <!-- Question 1: Soil Type -->
+    <div class="question">
+        <label for="soil">1. Choose the soil type:</label>
+        <select id="soil" name="soil" required>
+        <option value="sandy">Sandy</option>
+        <option value="clayey">Clayey</option>
+        <option value="loamy">Loamy</option>
+        <option value="chalky">Chalky</option>
+        </select>
+    </div>
+
+    <!-- Question 2: Current Temperature -->
+    <div class="question">
+        <label for="temperature">2. Current Temperature (auto-load):</label>
+        <input type="text" id="temperature" name="temperature" readonly>
+    </div>
+
+    <!-- Question 3: Previous Plantation Type -->
+    <div class="question">
+        <label for="previous">3. What type of plantation did you previously do?</label>
+        <select id="previous" name="previous" required>
+        <option value="cereals">Cereals</option>
+        <option value="vegetables">Vegetables</option>
+        <option value="fruits">Fruits</option>
+        </select>
+    </div>
+
+    <!-- Question 4: Current Season -->
+    <div class="question">
+        <label for="season">4. What is the current season?</label>
+        <select id="season" name="season" required>
+        <option value="spring">Spring</option>
+        <option value="summer">Summer</option>
+        <option value="autumn">Autumn</option>
+        <option value="winter">Winter</option>
+        </select>
+    </div>
+
+    <button type="button" class="button" id="generateRecommendation">Generate Recommendation</button>
+    </form>
+
+    <div class="result" id="result">
+    <h2>Your next planting choice:</h2>
+    <p id="recommendation"></p>
+    </div>
+</div>
+
+<script>
+    // Function to get the user's location
+    function getLocation() {
+    return new Promise((resolve, reject) => {
+        if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            position => resolve(position.coords),
+            error => reject(error)
+            );
+        } else {
+        reject("Geolocation not supported");
+        }
+    });
+    }
+
+    // Function to get the current temperature via the API
+    function getWeather(lat, lon) {
+      const apiKey = 'cf8858db1e9199c8fdaf9dbf19aca116'; // Replace with your API key
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric&lang=en`;
+    
+    return fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          return data.main.temp; // Returns the temperature in °C
+        })
+        .catch(error => {
+        console.error('Weather API Error:', error);
+        return null;
+        });
+    }
+
+    // Automatically load the current temperature
+    getLocation()
+    .then(coords => {
+        return getWeather(coords.latitude, coords.longitude);
+    })
+    .then(temp => {
+        if (temp !== null) {
+        document.getElementById('temperature').value = `${temp} °C`;
+        } else {
+        document.getElementById('temperature').value = "Error loading temperature.";
+        }
+    })
+    .catch(error => {
+        document.getElementById('temperature').value = "Unable to determine the temperature.";
+        console.error('Geolocation Error:', error);
+    });
+
+    // Function to generate the recommendation
+    document.getElementById('generateRecommendation').addEventListener('click', function() {
+    const soilType = document.getElementById('soil').value;
+    const temperature = parseInt(document.getElementById('temperature').value);
+    const previousPlantation = document.getElementById('previous').value;
+    const season = document.getElementById('season').value;
+
+      // Generate the recommendation based on criteria
+    const recommendation = getPlantationRecommendation(temperature, soilType, previousPlantation, season);
+
+    document.getElementById('result').style.display = 'block';
+    document.getElementById('recommendation').innerText = recommendation;
+    });
+
+    function getPlantationRecommendation(temperature, soilType, previousPlantation, season) {
+    let recommendation = '';
+
+      // 1. Based on temperature
+    if (temperature >= 30) {
+        recommendation += "It's very hot; prioritize heat-resistant crops like melons, cherry tomatoes, or peppers. ";
+    } else if (temperature >= 25) {
+        recommendation += "It's warm; you can plant eggplants, zucchinis, or herbs like basil and mint. ";
+    } else if (temperature >= 18) {
+        recommendation += "Moderate temperature, ideal for tomatoes, peppers, or leafy greens like spinach and lettuce. ";
+    } else if (temperature >= 10) {
+        recommendation += "It's cool, perfect for crops like potatoes, onions, or carrots. ";
+    } else {
+        recommendation += "It's cold; opt for cold-resistant plants like cabbages, broccoli, or beets. ";
+    }
+
+      // 2. Based on soil type
+    if (soilType === 'sandy') {
+        recommendation += "Sandy soil warms quickly, ideal for crops like carrots or radishes. ";
+    } else if (soilType === 'clayey') {
+        recommendation += "Clayey soil retains water, perfect for vegetables like squash or peas. ";
+    } else if (soilType === 'loamy') {
+        recommendation += "Loamy soil is nutrient-rich, ideal for vegetables like tomatoes, peppers, and cucumbers. ";
+    } else if (soilType === 'chalky') {
+        recommendation += "Chalky soil is well-drained; go for vegetables such as squash or melons. ";
+    }
+
+      // 3. Based on previous plantation
+    if (previousPlantation === 'cereals') {
+        recommendation += "You planted cereals; it's advisable to plant legumes like beans or peas after harvest. ";
+    } else if (previousPlantation === 'vegetables') {
+        recommendation += "You planted vegetables; you could consider complementary crops like tomatoes or peppers. ";
+    } else if (previousPlantation === 'fruits') {
+        recommendation += "You planted fruits; you might try hardy fruit trees for the current climate. ";
+    }
+
+      // 4. Based on the season
+    if (season === 'spring') {
+        recommendation += "Spring is the perfect season for planting fresh vegetables and aromatic herbs. ";
+    } else if (season === 'summer') {
+        recommendation += "In summer, it's best to plant heat-resistant crops like tomatoes and peppers. ";
+    } else if (season === 'autumn') {
+        recommendation += "Autumn is suitable for root vegetables like carrots and beets. ";
+    } else if (season === 'winter') {
+        recommendation += "Winter is the ideal time to plant winter crops like cabbages, broccoli, and spinach. ";
+    }
+
+    return recommendation;
+    }
+</script>
+
+            <!-- bas de page -->
+            <body>
+                <footer>
+                    <div class="footer-header">
+                        <h3 class="mini-tilte-1">How can we help?</h3>
+                        <h3 class="mini-tilte-1">Contact us anytime</h3>
+                    </div>
+                    <div class="footer-contact">
+                        <div>
+                            <strong class="color-1">Call us:</strong>
+                            <a href="tel:+212674556060">+212 674 556 060</a>
+                        </div>
+                        <div>
+                            <strong class="color-1" >Send us a message:</strong>
+                            <a href="mailto:2025.agroterra@gmail.com">2025.agroterra@gmail.com</a>
+                        </div>
+                        <div>
+                            <strong class="color-1">Follow us:</strong>
+                            <a href="https://web.facebook.com/profile.php?id=61570450615095&sk=about_contact_and_basic_info" class="social-icon"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/agro.terra.2025/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="https://x.com/2025Agro_terra" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/in/agro-terra-681b08340/recent-activity/all/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="footer-bottom">
+                        <img src="https://i.ibb.co/1YpQhZWb/Agro-Terra.png" alt="Agro-Terra Logo">
+                        <div class="footer-links">
+                            <a href="home-ang.html">Home</a> |
+                            <a href="contacter-ang.html">Contact Us</a> |
+                            <a href="Conditions-de-services-ang.html">Terms of Service</a> |
+                            <a href="Politique-de-vie-privée-ang.html">Privacy Policy</a> |
+                        </div>
+                    </div>
+                    <p class="copyright"> Copyright © Agro-Terra </p>
+                </footer>
+            </body>
+            </html>
+</body>
+
+<style>
+
+/* Général */
+body {
+    margin: 0 auto;
+}
+
+* {
+    font-family: Merriweather, sans-serif;
+}
+
+/* Section de la page d'accueil */
+.top-page {
+    background-image: url(https://i.ibb.co/vvMpQqmx/bg.png);
+    background-size: cover;
+    height: 70vh;
+    padding: 25px;
+}
+
+/* Header */
+header.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espacement entre le logo et la navigation */
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 20px 50px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 1000px;           /* Occupe 100% de la largeur du parent */
+    max-width: 1200px;     /* Largeur maximale du header */
+    position: relative;
+}
+
+
+/* Logo */
+header.header img {
+    margin: auto;
+    width: 70px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+header.header img:hover {
+    transform: scale(1.1);
+}
+
+/* Barre de navigation */
+.menu-style {
+    color: white;
+    text-decoration: none;
+}
+
+nav.nav {
+    display: flex;
+    margin: auto;
+    flex-direction: row; /* Aligne les éléments horizontalement */
+    justify-content: center; /* Centrer horizontalement la navigation */
+    align-items: center; /* Aligner verticalement */
+    list-style: none;
+    background: linear-gradient(90deg, #866a49e6, rgba(182, 142, 94, 0.9));
+    padding: 8px 30px; /* Réduire la hauteur en diminuant le padding vertical */
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+nav.nav li {
+    margin: 0 15px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav.nav li:hover {
+    color: rgba(255, 215, 0, 0.9); /* Couleur dorée au survol */
+    transform: scale(1.1);
+}
+
+nav.nav li.active {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+nav.nav li::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #ffd700;
+    transition: width 0.3s ease;
+    margin: 0 auto;
+}
+
+nav.nav li:hover::after {
+    width: 50%;
+}
+
+
+@import url(https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap);
+@import url(https://fonts.google.com/specimen/Abril+Fatface?query=abril&sidebar.open&selection.family=Abril+Fatface);
+@import url(https://fonts.google.com/specimen/Montserrat?query=monts);
+
+.conseille {
+    font-family: 'Roboto', sans-serif;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+    color: linear-gradient(100deg, #644e35bb, rgba(152, 114, 67, 0.635));;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #787171c0;
+    padding: 30px 0;
+}
+
+#plantation-container {
+    background-color: #957147bb;
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.question {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #383938;
+}
+
+/* CSS spécifique pour le label de la température */
+
+#temperature {
+    width: 760px;
+    padding: 14px 20px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    max-width: 1000; /* Limite la largeur du label de la température */
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+
+input[type="text"], select {
+    width: 100%;
+    padding: 14px 20px;
+    margin: 10px 0;  /* Ajusté la marge pour espacer les éléments */
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    color: #7e6445b5;
+}
+
+.button {
+    background-color: #987243a2;
+    color:white;
+    border: none;
+    padding: 14px 20px;
+    font-size: 18px;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: linear-gradient(100deg, #644e35bb, rgba(152, 114, 67, 0.635));
+    transform: translateY(-2px);
+}
+
+.result {
+    display: none;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #d2b089bb;
+    border-radius: 8px;
+    border: 1px solid #d2b089bb;
+    color: linear-gradient(100deg, #644e35bb, rgba(152, 114, 67, 0.635));
+    font-size: 18px;
+}
+
+/* Styles généraux */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #787171c0;
+    padding: 30px 0;
+}
+
+.header-content {
+    display: flex;
+    max-width: 1200px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 40px;
+}
+
+.header-img {
+    flex: 1; /* Prend moins de place dans le cadre */
+    max-width: 250px; 
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-text {
+    margin-right: 20px;
+    margin-right: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+main {
+    margin: 50px 0;
+    padding: 0 20px;
+}
+
+
+/* Landing Page */
+.big-title {
+    color: rgba(166, 130, 40, 0.742);
+    font-family: "Abril Fatface";
+    font-size: 80px;
+    margin: 50px 0px;
+    text-align: center;
+} 
+
+/* Liste des langues */
+
+/* Conteneur du bouton et de la liste déroulante */
+.language-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Bouton principal */
+.language {
+    width: auto;
+    display: inline-flex;
+    justify-content: center;
+    background-color: #4e3e2a; /* Marron */
+    margin: auto;
+    margin-right: -35px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.language:hover {
+    background-color: #6a5533; /* Marron plus clair */
+    transform: scale(1.05); /* Zoom léger */
+}
+
+/* Liste déroulante */
+.language-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%; /* Position juste en dessous du bouton */
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    min-width: 150px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px); /* Déplacement initial */
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+/* Style des éléments de la liste */
+.language-menu li {
+    text-align: left;
+    animation: slide-in 0.4s ease forwards; /* Animation pour chaque élément */
+    opacity: 0; /* Caché avant l'animation */
+    transform: translateX(-10px); /* Décalage initial à gauche */
+}
+
+.language-menu li a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+/* Survol des liens */
+.language-menu li a:hover {
+    background-color: #f4f4f4;
+    color: #5a4633; /* Marron foncé */
+    transform: translateX(5px); /* Déplacement léger vers la droite */
+}
+
+/* Apparition de la liste déroulante */
+.language-dropdown:hover .language-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* Position d'apparition */
+}
+
+/* Activation des animations sur les éléments */
+.language-dropdown:hover .language-menu li {
+    opacity: 1; /* Rendre visible */
+    transform: translateX(0); /* Ramener en place */
+}
+
+/* Animation d'apparition pour les éléments */
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateX(-15px); /* Décalage vers la gauche */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); /* Position normale */
+    }
+}
+
+
+/* bas de page */
+
+    /* Style général pour le footer */
+    footer {
+        background: linear-gradient(100deg, #644e35bb, rgba(152, 114, 67, 0.635));
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        font-family: Arial, sans-serif;
+    }
+    
+    .footer-header {
+        margin-bottom: 20px;
+    }
+    
+    .footer-header h3 {
+        margin: 0;
+        font-size: 18px;
+    }
+    
+    .footer-header p {
+        font-size: 14px;
+        margin: 5px 0 0;
+    }
+    
+    .footer-contact div {
+        margin-bottom: 10px;
+    }
+    
+    footer a {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    footer a:hover {
+        text-decoration: underline;
+    }
+    
+    footer hr {
+        border: 0.5px solid rgba(0, 0, 0, 0.5);
+        margin: 20px 0;
+    }
+    
+    .footer-bottom img {
+        width: 100px;
+        margin-bottom: 10px;
+    }
+    
+    .footer-links a {
+        margin: 0 10px;
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .footer-links a:hover {
+        text-decoration: underline;
+    }
+    
+    /* Style pour les icônes des réseaux sociaux */
+    .social-icon {
+        margin: 0 5px;
+        font-size: 20px;
+    }
+    
+    
+    .social-icon:hover {
+        color: rgb(150, 85, 73);
+    }
+    
+    .color-1 {
+        color: rgb(88, 79, 67);
+    }
+    
+    .copyright {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #fff;
+        text-align: left;
+    }
+
+</style>
+
+</html>

@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irrigation Intelligente</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"></script>
+</head>
+
+
+<body>
+<body></body>
+    <section class="top-page">
+
+        <header class="header">
+            <a href="home.html" class="menu-style"><img src="https://i.ibb.co/1YpQhZWb/Agro-Terra.png" alt="Logo Agro-Terra"></a>
+            <nav class="nav">
+                <li><a href="home.html" class="menu-style">Home</a></li>
+                <li><a href="Irrigation.html" class="menu-style">Irrigation Intelligente</a></li>
+                <li><a href="Météo.html" class="menu-style">Météo</a></li>
+                <li><a href="Conseille.html" class="menu-style">Conseil plantation</a></li>
+                <li><a href="Croissance.html" class="menu-style">Croissance Prédictive</a></li>
+                <li><a href="contacter.html" class="menu-style">Contactez-nous</a></li>
+            </nav>
+            <div class="language-dropdown">
+                <button class="language">Langue</button>
+                <ul class="language-menu">
+                    <li><a href="Irrigation.html">Français</a></li>
+                    <li><a href="Irrigation-ang.html">English</a></li>
+                    <li><a href="Irrigation-ar.html">العربية</a></li>
+                </ul>
+            </div>
+        </header>
+        <header>
+            <div class="header-content">
+                <img src="https://i.ibb.co/rK76G0QZ/Designer-1.jpg" alt="Photo d'irrigation" class="header-img">
+                <div class="header-text">
+                    <h1>Irrigation intelligente</h1>
+                    <p>L'irrigation intelligente utilise des capteurs pour mesurer l'humidité du sol et les conditions météorologiques, ajustant automatiquement l'apport en eau pour chaque culture. Elle permet une gestion à distance via des applications, offrant un suivi en temps réel. En intégrant les prévisions météorologiques, elle optimise l'utilisation de l'eau en fonction des besoins réels des plantes. L'objectif est de réduire le gaspillage, de préserver les ressources et d'assurer une croissance optimale des cultures.</p>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div id="calculator-container">
+                <h2>Calculateur d'Irrigation Intelligent</h2>
+                <form id="irrigation-form">
+                    <label for="plant-name">Nom de la plante</label>
+                            <select id="plant-name">
+                        <!-- Céréales -->
+                        <optgroup label="Céréales">
+                            <option value="Maïs">Maïs</option>
+                            <option value="Sorgho">Sorgho</option>
+                            <option value="Millet perlé">Millet perlé</option>
+                            <option value="Fonio noir">Fonio noir</option>
+                            <option value="Teff">Teff</option>
+                            <option value="Riz de mangrove">Riz de mangrove</option>
+                            <option value="Éleusine">Éleusine</option>
+                            <option value="Blé dur">Blé dur</option>
+                            <option value="Orge">Orge</option>
+                            <option value="Avoine">Avoine</option>
+                            <option value="Riz basmati">Riz basmati</option>
+                            <option value="Riz jasmin">Riz jasmin</option>
+                            <option value="Riz rouge">Riz rouge</option>
+                            <option value="Riz noir">Riz noir</option>
+                            <option value="Petit épeautre">Petit épeautre</option>
+                            <option value="Grand épeautre">Grand épeautre</option>
+                            <option value="Amarante">Amarante</option>
+                            <option value="Quinoa blanc">Quinoa blanc</option>
+                            <option value="Quinoa rouge">Quinoa rouge</option>
+                            <option value="Quinoa noir">Quinoa noir</option>
+                            <option value="Blé tendre">Blé tendre</option>
+                            <option value="Kamut">Kamut</option>
+                            <option value="Sarrasin">Sarrasin</option>
+                            <option value="Seigle">Seigle</option>
+                            <option value="Farro">Farro</option>
+                            <option value="Triticale">Triticale</option>
+                            <option value="Blé khorasan">Blé khorasan</option>
+                            <option value="Millet commun">Millet commun</option>
+                            <option value="Millet japonais">Millet japonais</option>
+                            <option value="Millet indien">Millet indien</option>
+                            <option value="Fonio blanc">Fonio blanc</option>
+                            <option value="Blé turc">Blé turc</option>  
+                            <option value="Orge perlé">Orge perlé</option>
+                            <option value="Orge mondé">Orge mondé</option>
+                            <option value="Avoine nue">Avoine nue</option>
+                            <option value="Einkorn">Einkorn</option>
+                        </optgroup>
+                                            
+                        <!-- Légumineuses --> 
+                        <optgroup label="Légumineuses">
+                            <option value="Niébé">Niébé</option>
+                            <option value="Pois bambara">Pois bambara</option>
+                            <option value="Voandzou">Voandzou</option>
+                            <option value="Dolique">Dolique</option>
+                            <option value="Pois d'Angole">Pois d'Angole</option>
+                            <option value="Lentille de terre">Lentille de terre</option>
+                            <option value="Haricot mungo">Haricot mungo</option>
+                            <option value="Pois cajan">Pois cajan</option>
+                            <option value="Fève">Fève</option>
+                            <option value="Pois chiche">Pois chiche</option>
+                            <option value="Lentille verte">Lentille verte</option>
+                            <option value="Lentille corail">Lentille corail</option>
+                            <option value="Lentille brune">Lentille brune</option>
+                            <option value="Lupin">Lupin</option>
+                            <option value="Haricot rouge">Haricot rouge</option>
+                            <option value="Haricot noir">Haricot noir</option>
+                            <option value="Haricot blanc">Haricot blanc</option>
+                            <option value="Haricot pinto">Haricot pinto</option>
+                            <option value="Haricot borlotti">Haricot borlotti</option>
+                            <option value="Fénugrec">Fénugrec</option>
+                            <option value="Soja">Soja</option>
+                            <option value="Gesse">Gesse</option>
+                            <option value="Trèfle souterrain">Trèfle souterrain</option>
+                            <option value="Arachide">Arachide</option>
+                            <option value="Fenugrec">Fenugrec</option>
+                            <option value="Pois cassé">Pois cassé</option>
+                        </optgroup>
+                        
+                        <!-- Tubercules et racines -->
+                        <optgroup label="Tubercules">
+                            <option value="Manioc">Manioc</option>
+                            <option value="Igname ailée">Igname ailée</option>
+                            <option value="Taro géant">Taro géant</option>
+                            <option value="Patate douce orange">Patate douce orange</option>
+                            <option value="Colocase">Colocase</option>
+                            <option value="Macabo">Macabo</option>
+                            <option value="Igname de Chine">Igname de Chine</option>
+                            <option value="Patate douce violette">Patate douce violette</option>
+                            <option value="Igname d'eau">Igname d'eau</option>
+                            <option value="Taro violet">Taro violet</option>
+                            <option value="Igname blanche">Igname blanche</option>
+                            <option value="Patate douce blanche">Patate douce blanche</option>
+                            <option value="Igname rouge">Igname rouge</option>
+                            <option value="Patate douce jaune">Patate douce jaune</option>
+                            <option value="Igname sauvage">Igname sauvage</option>
+                            <option value="Patate douce pourpre">Patate douce pourpre</option>
+                            <option value="Igname jaune">Igname jaune</option>
+                            <option value="Patate douce rouge">Patate douce rouge</option>
+                            <option value="Igname violette">Igname violette</option>
+                            <option value="Patate douce noire">Patate douce noire</option>
+                            <option value="Igname à chair jaune">Igname à chair jaune</option>
+                            <option value="Patate douce à chair blanche">Patate douce à chair blanche</option>
+                            <option value="Igname à chair rouge">Igname à chair rouge</option>
+                            <option value="Patate douce à chair orange">Patate douce à chair orange</option>
+                            <option value="Igname à chair violette">Igname à chair violette</option>
+                            <option value="Patate douce à chair rose">Patate douce à chair rose</option>
+                            <option value="Igname à chair blanche">Igname à chair blanche</option>
+                            <option value="Patate douce à chair jaune">Patate douce à chair jaune</option>
+                            <option value="Igname à chair orange">Igname à chair orange</option>
+                            <option value="Patate douce à chair violette">Patate douce à chair violette</option>
+                        </optgroup>
+                        
+                        <!-- Arbres fruitiers -->
+                        <optgroup label="Arbres fruitiers">
+                            <option value="Baobab">Baobab</option>
+                            <option value="Karité">Karité</option>
+                            <option value="Manguier">Manguier</option>
+                            <option value="Papayer africain">Papayer africain</option>
+                            <option value="Goyavier du Sénégal">Goyavier du Sénégal</option>
+                            <option value="Jujubier">Jujubier</option>
+                            <option value="Anacardier">Anacardier</option>
+                            <option value="Palmier à huile">Palmier à huile</option>
+                            <option value="Dattier">Dattier</option>
+                            <option value="Citronnier">Citronnier</option>
+                            <option value="Grenadier">Grenadier</option>
+                            <option value="Avocatier">Avocatier</option>
+                            <option value="Mandarinier">Mandarinier</option>
+                            <option value="Pamplemoussier">Pamplemoussier</option>
+                            <option value="Figuier">Figuier</option>
+                            <option value="Goyavier">Goyavier</option>
+                            <option value="Prunier africain">Prunier africain</option>
+                            <option value="Pêcher africain">Pêcher africain</option>
+                            <option value="Abricotier">Abricotier</option>
+                            <option value="Cerisier africain">Cerisier africain</option>
+                            <option value="Pistachier">Pistachier</option>
+                            <option value="Amandier">Amandier</option>
+                            <option value="Cacaoyer">Cacaoyer</option>
+                            <option value="Caféier">Caféier</option>
+                            <option value="Bananiers">Bananiers</option>
+                            <option value="Ananas">Ananas</option>
+                            <option value="Goyave de Chine">Goyave de Chine</option>
+                            <option value="Citronnelle">Citronnelle</option>
+                            <option value="Grenadier nain">Grenadier nain</option>
+                            <option value="Palmier dattier nain">Palmier dattier nain</option>
+                        </optgroup>
+                        
+                        <!-- Légumes traditionnels -->
+                        <optgroup label="Légumes traditionnels">
+                            <option value="Morelle noire">Morelle noire</option>
+                            <option value="Oseille de Guinée">Oseille de Guinée</option>
+                            <option value="Laitue du désert">Laitue du désert</option>
+                            <option value="Amarante rouge">Amarante rouge</option>
+                            <option value="Aubergine amère">Aubergine amère</option>
+                            <option value="Gombo">Gombo</option>
+                            <option value="Courge africaine">Courge africaine</option>
+                            <option value="Tomate locale">Tomate locale</option>
+                            <option value="Piment africain">Piment africain</option>
+                            <option value="Oignon africain">Oignon africain</option>
+                            <option value="Épinards africains">Épinards africains</option>
+                            <option value="Chou africain">Chou africain</option>
+                            <option value="Carotte africaine">Carotte africaine</option>
+                            <option value="Betterave africaine">Betterave africaine</option>
+                            <option value="Poivron africain">Poivron africain</option>
+                            <option value="Concombre africain">Concombre africain</option>
+                            <option value="Courgette africaine">Courgette africaine</option>
+                            <option value="Haricot vert africain">Haricot vert africain</option>
+                            <option value="Pois africain">Pois africain</option>
+                            <option value="Lentille africaine">Lentille africaine</option>
+                            <option value="Fève africaine">Fève africaine</option>
+                            <option value="Radis africain">Radis africain</option>
+                            <option value="Navet africain">Navet africain</option>
+                            <option value="Céleri africain">Céleri africain</option>
+                            <option value="Persil africain">Persil africain</option>
+                            <option value="Coriandre africaine">Coriandre africaine</option>
+                            <option value="Basilic africain">Basilic africain</option>
+                            <option value="Thym africain">Thym africain</option>
+                            <option value="Romarin africain">Romarin africain</option>
+                            <option value="Menthe africaine">Menthe africaine</option>
+                        </optgroup>
+                        
+                        <!-- Plantes médicinales -->
+                        <optgroup label="Plantes médicinales">
+                            <option value="Artemisia">Artemisia</option>
+                            <option value="Griffonia">Griffonia</option>
+                            <option value="Kinkeliba">Kinkeliba</option>
+                            <option value="Moringa">Moringa</option>
+                            <option value="Aloe vera">Aloe vera</option>
+                            <option value="Neem">Neem</option>
+                            <option value="Gingembre">Gingembre</option>
+                            <option value="Curcuma">Curcuma</option>
+                            <option value="Basilic sacré">Basilic sacré</option>
+                            <option value="Citronnelle">Citronnelle</option>
+                            <option value="Thym">Thym</option>
+                            <option value="Romarin">Romarin</option>
+                            <option value="Menthe poivrée">Menthe poivrée</option>
+                            <option value="Coriandre">Coriandre</option>
+                            <option value="Persil">Persil</option>
+                            <option value="Cumin">Cumin</option>
+                            <option value="Fenugrec">Fenugrec</option>
+                            <option value="Aneth">Aneth</option>
+                            <option value="Safran">Safran</option>
+                            <option value="Origan">Origan</option>
+                            <option value="Camomille">Camomille</option>
+                            <option value="Lavande">Lavande</option>
+                            <option value="Géranium">Géranium</option>
+                            <option value="Bégonia">Bégonia</option>
+                            <option value="Camélia">Camélia</option>
+                            <option value="Fuchsia">Fuchsia</option>
+                            <option value="Chrysanthème">Chrysanthème</option>
+                            <option value="Violet">Violet</option>
+                            <option value="Lys">Lys</option>
+                            <option value="Tulipe">Tulipe</option>
+                        </optgroup>
+                        
+                        <!-- Plantes aromatiques -->
+                        <optgroup label="Plantes aromatiques">
+                            <option value="Thym">Thym</option>
+                            <option value="Romarin">Romarin</option>
+                            <option value="Menthe poivrée">Menthe poivrée</option>
+                            <option value="Coriandre">Coriandre</option>
+                            <option value="Persil">Persil</option>
+                            <option value="Cumin">Cumin</option>
+                            <option value="Fenugrec">Fenugrec</option>
+                            <option value="Aneth">Aneth</option>
+                            <option value="Safran">Safran</option>
+                            <option value="Origan">Origan</option>
+                            <option value="Basilic">Basilic</option>
+                            <option value="Citronnelle">Citronnelle</option>
+                            <option value="Lavande">Lavande</option>
+                            <option value="Géranium">Géranium</option>
+                            <option value="Bégonia">Bégonia</option>
+                            <option value="Camélia">Camélia</option>
+                            <option value="Fuchsia">Fuchsia</option>
+                            <option value="Chrysanthème">Chrysanthème</option>
+                            <option value="Violet">Violet</option>
+                            <option value="Lys">Lys</option>
+                            <option value="Tulipe">Tulipe</option>
+                            <option value="Gingembre">Gingembre</option>
+                            <option value="Curcuma">Curcuma</option>
+                            <option value="Basilic sacré">Basilic sacré</option>
+                            <option value="Citronnelle">Citronnelle</option>
+                            <option value="Thym">Thym</option>
+                            <option value="Romarin">Romarin</option>
+                            <option value="Menthe poivrée">Menthe poivrée</option>
+                            <option value="Coriandre">Coriandre</option>
+                            <option value="Persil">Persil</option>
+                        </optgroup>
+                        
+                        <!-- Plantes ornementales -->
+                        <optgroup label="Plantes ornementales">
+                            <option value="Hibiscus">Hibiscus</option>
+                            <option value="Bougainvillier">Bougainvillier</option>
+                            <option value="Frangipanier">Frangipanier</option>
+                            <option value="Lantanier">Lantanier</option>
+                            <option value="Rose du désert">Rose du désert</option>
+                            <option value="Jasmin">Jasmin</option>
+                            <option value="Lavande">Lavande</option>
+                            <option value="Géranium">Géranium</option>
+                            <option value="Bégonia">Bégonia</option>
+                            <option value="Camélia">Camélia</option>
+                            <option value="Fuchsia">Fuchsia</option>
+                            <option value="Chrysanthème">Chrysanthème</option>
+                            <option value="Violet">Violet</option>
+                            <option value="Lys">Lys</option>
+                            <option value="Tulipe">Tulipe</option>
+                            <option value="Glaïeul">Glaïeul</option>
+                            <option value="Iris">Iris</option>
+                            <option value="Dahlia">Dahlia</option>
+                            <option value="Freesia">Freesia</option>
+                            <option value="Pivoine">Pivoine</option>
+                            <option value="Cosmos">Cosmos</option>
+                            <option value="Narcisse">Narcisse</option>
+                            <option value="Pensée">Pensée</option>
+                            <option value="Canna">Canna</option>
+                            <option value="Primevère">Primevère</option>
+                            <option value="Mimosa">Mimosa</option>
+                            <option value="Rose">Rose</option>
+                            <option value="Géranium rosat">Géranium rosat</option>
+                            <option value="Lilas">Lilas</option>
+                            <option value="Pétunia">Pétunia</option>
+                        </optgroup>
+                        
+                                    <!-- Plantes de case -->
+                        <optgroup label="Plantes de case">
+                            <option value="Palmier dattier">Palmier dattier</option>
+                            <option value="Bananiers">Bananiers</option>
+                            <option value="Cocotier">Cocotier</option>
+                            <option value="Avocatier">Avocatier</option>
+                            <option value="Papayer">Papayer</option>
+                            <option value="Citronnier">Citronnier</option>
+                            <option value="Oranger">Oranger</option>
+                            <option value="Mandarinier">Mandarinier</option>
+                            <option value="Pamplemoussier">Pamplemoussier</option>
+                            <option value="Grenadier">Grenadier</option>
+                            <option value="Manguier">Manguier</option>
+                            <option value="Goyavier">Goyavier</option>
+                            <option value="Caroubier">Caroubier</option>
+                            <option value="Néflier">Néflier</option>
+                            <option value="Jujubier">Jujubier</option>
+                            <option value="Corossolier">Corossolier</option>
+                            <option value="Litchi">Litchi</option>
+                            <option value="Longanier">Longanier</option>
+                            <option value="Annonier">Annonier</option>
+                            <option value="Chérimolier">Chérimolier</option>
+                            <option value="Figuier">Figuier</option>
+                            <option value="Pêcher">Pêcher</option>
+                            <option value="Abricotier">Abricotier</option>
+                            <option value="Cerisier tropical">Cerisier tropical</option>
+                            <option value="Cacaoyer">Cacaoyer</option>
+                            <option value="Noyer du Queensland">Noyer du Queensland</option>
+                            <option value="Safoutier">Safoutier</option>
+                            <option value="Baobab">Baobab</option>
+                            <option value="Marula">Marula</option>
+                        </optgroup>
+                        <!-- Plantes sauvages comestibles -->
+                        <optgroup label="Plantes sauvages comestibles">
+                            <option value="Baies de sureau">Baies de sureau</option>
+                            <option value="Feuilles de baobab">Feuilles de baobab</option>
+                            <option value="Fruits du tamarinier">Fruits du tamarinier</option>
+                            <option value="Feuilles de moringa">Feuilles de moringa</option>
+                            <option value="Fruits du jujubier">Fruits du jujubier</option>
+                            <option value="Racines de manioc sauvage">Racines de manioc sauvage</option>
+                            <option value="Feuilles d'oseille">Feuilles d'oseille</option>
+                            <option value="Fruits du karité">Fruits du karité</option>
+                            <option value="Feuilles de citronnelle">Feuilles de citronnelle</option>
+                            <option value="Fruits du palmier à huile">Fruits du palmier à huile</option>
+                            <option value="Noix du karité">Noix du karité</option>
+                            <option value="Fruits du dattier du désert">Fruits du dattier du désert</option>
+                            <option value="Graines de néré">Graines de néré</option>
+                            <option value="Feuilles de manioc">Feuilles de manioc</option>
+                            <option value="Fruits de l'arbre à pain">Fruits de l'arbre à pain</option>
+                            <option value="Tubercules d'igname sauvage">Tubercules d'igname sauvage</option>
+                            <option value="Graines de lotus">Graines de lotus</option>
+                            <option value="Fruits du marula">Fruits du marula</option>
+                            <option value="Fruits du safoutier">Fruits du safoutier</option>
+                            <option value="Feuilles de patate douce sauvage">Feuilles de patate douce sauvage</option>
+                            <option value="Graines de pastèque sauvage">Graines de pastèque sauvage</option>
+                            <option value="Baies de l’argousier">Baies de l’argousier</option>
+                            <option value="Fruits du baobab">Fruits du baobab</option>
+                            <option value="Gousses du caroubier">Gousses du caroubier</option>
+                            <option value="Feuilles de pourpier">Feuilles de pourpier</option>
+                            <option value="Graines de fonio sauvage">Graines de fonio sauvage</option>
+                            <option value="Feuilles de tamarinier">Feuilles de tamarinier</option>
+                            <option value="Bulbes de lys sauvage">Bulbes de lys sauvage</option>
+                            <option value="Fruits de l'églantier">Fruits de l'églantier</option>
+                            <option value="Fruits de l'arganier">Fruits de l'arganier</option>
+                            <option value="Jeunes pousses de bambou">Jeunes pousses de bambou</option>
+                            <option value="Graines de baobab">Graines de baobab</option>
+                            <option value="Racines de pissenlit">Racines de pissenlit</option>
+                            <option value="Fruits du mancenillier (toxique sans préparation)">Fruits du mancenillier (toxique sans préparation)</option>
+                            <option value="Noix de kola">Noix de kola</option>
+                            <option value="Graines de tamarin">Graines de tamarin</option>
+                            <option value="Fruits de l'arbousier">Fruits de l'arbousier</option>
+                            <option value="Fruits du murier sauvage">Fruits du murier sauvage</option>
+                        </optgroup>
+                        
+                    </select>
+
+                        <!-- Ajouter 200+ autres plantes ici -->
+                    </select>
+
+                    <label for="climate">Climat de la région</label>
+                    <select id="climate">
+                        <option value="tropical">Tropical</option>
+                        <option value="aride">Aride</option>
+                        <option value="tempéré">Tempéré</option>
+                        <option value="montagne">Montagne</option>
+                        <option value="semi-aride">Semi-aride</option>
+                    </select>
+
+                    <label for="soil-type">Type de sol</label>
+                    <select id="soil-type">
+                        <option value="sableux">Sableux</option>
+                        <option value="argileux">Argileux</option>
+                        <option value="limoneux">Limoneux</option>
+                    </select>
+
+                    <button type="submit">Calculer l'irrigation</button>
+                </form>
+
+                <div class="result" id="result-container" style="display: none;">
+                    <p id="result-text"></p>
+                </div>
+            </div>
+        </main>
+
+        <script>
+const plantDatabase = {
+    'Maïs': { base: 20, climateFactor: 1.2, soilFactor: 0.9 },
+    'Sorgho': { base: 15, climateFactor: 0.9, soilFactor: 1.0 },
+    'Millet perlé': { base: 18, climateFactor: 1.1, soilFactor: 0.8 },
+    'Fonio noir': { base: 12, climateFactor: 1.3, soilFactor: 0.7 },
+    'Teff': { base: 14, climateFactor: 1.0, soilFactor: 0.9 },
+    'Riz de mangrove': { base: 22, climateFactor: 1.4, soilFactor: 1.1 },
+    'Éleusine': { base: 16, climateFactor: 1.2, soilFactor: 0.8 },
+    'Blé dur': { base: 19, climateFactor: 1.1, soilFactor: 1.0 },
+    'Orge': { base: 17, climateFactor: 1.0, soilFactor: 1.1 },
+    'Avoine': { base: 15, climateFactor: 0.9, soilFactor: 1.2 },
+    'Riz basmati': { base: 21, climateFactor: 1.3, soilFactor: 1.0 },
+    'Riz jasmin': { base: 20, climateFactor: 1.4, soilFactor: 0.9 },
+    'Riz rouge': { base: 18, climateFactor: 1.2, soilFactor: 1.1 },
+    'Riz noir': { base: 17, climateFactor: 1.1, soilFactor: 1.0 },
+    'Petit épeautre': { base: 14, climateFactor: 1.0, soilFactor: 0.9 },
+    'Grand épeautre': { base: 15, climateFactor: 1.1, soilFactor: 1.0 },
+    'Amarante': { base: 13, climateFactor: 1.2, soilFactor: 0.8 },
+    'Quinoa blanc': { base: 16, climateFactor: 1.3, soilFactor: 1.1 },
+    'Quinoa rouge': { base: 17, climateFactor: 1.2, soilFactor: 1.0 },
+    'Quinoa noir': { base: 18, climateFactor: 1.1, soilFactor: 0.9 },
+    'Blé tendre': { base: 19, climateFactor: 1.0, soilFactor: 1.1 },
+    'Kamut': { base: 15, climateFactor: 1.1, soilFactor: 0.9 },
+    'Sarrasin': { base: 14, climateFactor: 1.2, soilFactor: 1.0 },
+    'Seigle': { base: 16, climateFactor: 1.0, soilFactor: 1.2 },
+    'Farro': { base: 13, climateFactor: 1.1, soilFactor: 0.8 },
+    'Triticale': { base: 17, climateFactor: 1.2, soilFactor: 1.0 },
+    'Blé khorasan': { base: 18, climateFactor: 1.1, soilFactor: 0.9 },
+    'Millet commun': { base: 12, climateFactor: 1.3, soilFactor: 0.7 },
+    'Millet japonais': { base: 13, climateFactor: 1.2, soilFactor: 0.8 },
+    'Millet indien': { base: 14, climateFactor: 1.1, soilFactor: 0.9 },
+    'Fonio blanc': { base: 11, climateFactor: 1.3, soilFactor: 0.7 },
+    'Blé turc': { base: 16, climateFactor: 1.0, soilFactor: 1.1 },
+    'Orge perlé': { base: 17, climateFactor: 1.1, soilFactor: 0.9 },
+    'Orge mondé': { base: 18, climateFactor: 1.2, soilFactor: 1.0 },
+    'Avoine nue': { base: 15, climateFactor: 0.9, soilFactor: 1.2 },
+    'Einkorn': { base: 14, climateFactor: 1.0, soilFactor: 0.8 },
+    'Niébé': { base: 12, climateFactor: 1.2, soilFactor: 1.0 },
+    'Pois bambara': { base: 14, climateFactor: 1.1, soilFactor: 1.2 },
+    'Voandzou': { base: 13, climateFactor: 1.3, soilFactor: 1.1 },
+    'Dolique': { base: 15, climateFactor: 1.0, soilFactor: 1.0 },
+    'Pois d\'Angole': { base: 16, climateFactor: 1.1, soilFactor: 1.2 },
+    'Lentille de terre': { base: 11, climateFactor: 1.2, soilFactor: 0.9 },
+    'Haricot mungo': { base: 13, climateFactor: 1.3, soilFactor: 1.1 },
+    'Pois cajan': { base: 14, climateFactor: 1.2, soilFactor: 1.0 },
+    'Fève': { base: 17, climateFactor: 1.0, soilFactor: 1.3 },
+    'Pois chiche': { base: 16, climateFactor: 1.1, soilFactor: 1.0 },
+    'Lentille verte': { base: 12, climateFactor: 1.2, soilFactor: 0.9 },
+    'Lentille corail': { base: 13, climateFactor: 1.2, soilFactor: 1.0 },
+    'Lentille brune': { base: 12, climateFactor: 1.1, soilFactor: 1.0 },
+    'Lupin': { base: 14, climateFactor: 1.1, soilFactor: 1.2 },
+    'Haricot rouge': { base: 15, climateFactor: 1.0, soilFactor: 1.1 },
+    'Haricot noir': { base: 14, climateFactor: 1.2, soilFactor: 1.0 },
+    'Haricot blanc': { base: 13, climateFactor: 1.1, soilFactor: 1.1 },
+    'Haricot pinto': { base: 14, climateFactor: 1.1, soilFactor: 1.0 },
+    'Haricot borlotti': { base: 13, climateFactor: 1.0, soilFactor: 1.1 },
+    'Fénugrec': { base: 12, climateFactor: 1.2, soilFactor: 1.0 },
+    'Soja': { base: 15, climateFactor: 1.3, soilFactor: 1.1 },
+    'Gesse': { base: 14, climateFactor: 1.1, soilFactor: 1.0 },
+    'Trèfle souterrain': { base: 11, climateFactor: 1.1, soilFactor: 1.0 },
+    'Arachide': { base: 16, climateFactor: 1.2, soilFactor: 1.1 },
+    'Fenugrec': { base: 12, climateFactor: 1.2, soilFactor: 1.0 },
+    'Pois cassé': { base: 13, climateFactor: 1.1, soilFactor: 1.0 },
+    'Manioc': { base: 10, climateFactor: 0.7, soilFactor: 1.0 },
+    'Igname ailée': { base: 9, climateFactor: 0.8, soilFactor: 1.1 },
+    'Taro géant': { base: 11, climateFactor: 1.1, soilFactor: 0.9 },
+    'Patate douce orange': { base: 8, climateFactor: 0.9, soilFactor: 1.0 },
+    'Colocase': { base: 9.5, climateFactor: 1.0, soilFactor: 0.95 },
+    'Macabo': { base: 10.2, climateFactor: 0.85, soilFactor: 1.05 },
+    'Igname de Chine': { base: 8.8, climateFactor: 0.75, soilFactor: 1.1 },
+    'Patate douce violette': { base: 8.5, climateFactor: 0.88, soilFactor: 1.05 },
+    'Igname d\'eau': { base: 12, climateFactor: 1.2, soilFactor: 0.8 },
+    'Taro violet': { base: 10.5, climateFactor: 1.05, soilFactor: 0.9 },
+    'Igname blanche': { base: 9.2, climateFactor: 0.78, soilFactor: 1.08 },
+    'Patate douce blanche': { base: 7.8, climateFactor: 0.92, soilFactor: 1.02 },
+    'Igname rouge': { base: 9.5, climateFactor: 0.85, soilFactor: 1.1 },
+    'Patate douce jaune': { base: 8.2, climateFactor: 0.89, soilFactor: 1.03 },
+    'Igname sauvage': { base: 7.5, climateFactor: 0.7, soilFactor: 1.15 },
+    'Patate douce pourpre': { base: 8.7, climateFactor: 0.91, soilFactor: 1.04 },
+    'Igname jaune': { base: 9.8, climateFactor: 0.82, soilFactor: 1.07 },
+    'Patate douce rouge': { base: 8.3, climateFactor: 0.87, soilFactor: 1.06 },
+    'Igname violette': { base: 10.1, climateFactor: 0.79, soilFactor: 1.09 },
+    'Patate douce noire': { base: 7.9, climateFactor: 0.93, soilFactor: 1.01 },
+    'Igname à chair jaune': { base: 9.3, climateFactor: 0.81, soilFactor: 1.12 },
+    'Patate douce à chair blanche': { base: 8.1, climateFactor: 0.86, soilFactor: 1.05 },
+    'Igname à chair rouge': { base: 9.7, climateFactor: 0.83, soilFactor: 1.11 },
+    'Patate douce à chair orange': { base: 8.4, climateFactor: 0.9, soilFactor: 1.03 },
+    'Igname à chair violette': { base: 10.3, climateFactor: 0.77, soilFactor: 1.13 },
+    'Patate douce à chair rose': { base: 8.6, climateFactor: 0.88, soilFactor: 1.04 },
+    'Igname à chair blanche': { base: 9.4, climateFactor: 0.8, soilFactor: 1.1 },
+    'Patate douce à chair jaune': { base: 8.0, climateFactor: 0.89, soilFactor: 1.02 },
+    'Igname à chair orange': { base: 9.6, climateFactor: 0.84, soilFactor: 1.09 },
+    'Patate douce à chair violette': { base: 8.9, climateFactor: 0.91, soilFactor: 1.06 },
+    'Baobab': { base: 5, climateFactor: 1.3, soilFactor: 0.8 },
+    'Karité': { base: 6, climateFactor: 1.2, soilFactor: 0.7 },
+    'Manguier': { base: 15, climateFactor: 1.1, soilFactor: 1.0 },
+    'Papayer africain': { base: 12, climateFactor: 1.0, soilFactor: 1.0 },
+    'Goyavier du Sénégal': { base: 11, climateFactor: 0.95, soilFactor: 1.05 },
+    'Jujubier': { base: 4, climateFactor: 1.4, soilFactor: 0.6 },
+    'Anacardier': { base: 9, climateFactor: 1.1, soilFactor: 0.9 },
+    'Palmier à huile': { base: 13, climateFactor: 1.15, soilFactor: 0.85 },
+    'Dattier': { base: 10, climateFactor: 1.3, soilFactor: 0.75 },
+    'Citronnier': { base: 8, climateFactor: 1.0, soilFactor: 1.0 },
+    'Grenadier': { base: 7, climateFactor: 1.05, soilFactor: 0.95 },
+    'Avocatier': { base: 14, climateFactor: 1.1, soilFactor: 0.9 },
+    'Mandarinier': { base: 9, climateFactor: 0.95, soilFactor: 1.05 },
+    'Pamplemoussier': { base: 10, climateFactor: 1.0, soilFactor: 1.0 },
+    'Figuier': { base: 6, climateFactor: 1.2, soilFactor: 0.8 },
+    'Goyavier': { base: 8, climateFactor: 0.9, soilFactor: 1.1 },
+    'Prunier africain': { base: 7, climateFactor: 1.0, soilFactor: 1.0 },
+    'Pêcher africain': { base: 8, climateFactor: 0.95, soilFactor: 1.05 },
+    'Abricotier': { base: 7.5, climateFactor: 1.1, soilFactor: 0.9 },
+    'Cerisier africain': { base: 6.5, climateFactor: 1.15, soilFactor: 0.85 },
+    'Pistachier': { base: 5, climateFactor: 1.3, soilFactor: 0.7 },
+    'Amandier': { base: 6, climateFactor: 1.2, soilFactor: 0.8 },
+    'Cacaoyer': { base: 12, climateFactor: 1.1, soilFactor: 0.9 },
+    'Caféier': { base: 10, climateFactor: 1.0, soilFactor: 1.0 },
+    'Bananiers': { base: 18, climateFactor: 1.2, soilFactor: 0.9 },
+    'Ananas': { base: 9, climateFactor: 1.05, soilFactor: 1.0 },
+    'Goyave de Chine': { base: 8.5, climateFactor: 0.95, soilFactor: 1.05 },
+    'Citronnelle': { base: 4, climateFactor: 1.4, soilFactor: 0.6 },
+    'Grenadier nain': { base: 5, climateFactor: 1.3, soilFactor: 0.7 },
+    'Palmier dattier nain': { base: 8, climateFactor: 1.1, soilFactor: 0.9 },
+    'Morelle noire': { base: 4, climateFactor: 0.9, soilFactor: 1.1 },
+    'Oseille de Guinée': { base: 5, climateFactor: 1.0, soilFactor: 1.0 },
+    'Laitue du désert': { base: 6, climateFactor: 0.8, soilFactor: 1.2 },
+    'Amarante rouge': { base: 5.5, climateFactor: 0.85, soilFactor: 1.05 },
+    'Aubergine amère': { base: 7, climateFactor: 0.95, soilFactor: 1.1 },
+    'Gombo': { base: 8, climateFactor: 1.0, soilFactor: 1.0 },
+    'Courge africaine': { base: 9, climateFactor: 0.9, soilFactor: 1.1 },
+    'Tomate locale': { base: 10, climateFactor: 1.0, soilFactor: 0.9 },
+    'Piment africain': { base: 7, climateFactor: 1.1, soilFactor: 0.8 },
+    'Oignon africain': { base: 6, climateFactor: 0.95, soilFactor: 1.05 },
+    'Épinards africains': { base: 5, climateFactor: 0.9, soilFactor: 1.1 },
+    'Chou africain': { base: 7, climateFactor: 1.0, soilFactor: 1.0 },
+    'Carotte africaine': { base: 6.5, climateFactor: 0.95, soilFactor: 1.05 },
+    'Betterave africaine': { base: 7.2, climateFactor: 0.9, soilFactor: 1.1 },
+    'Poivron africain': { base: 8, climateFactor: 1.0, soilFactor: 0.9 },
+    'Concombre africain': { base: 9, climateFactor: 0.95, soilFactor: 1.05 },
+    'Courgette africaine': { base: 8.5, climateFactor: 0.9, soilFactor: 1.1 },
+    'Haricot vert africain': { base: 7, climateFactor: 1.0, soilFactor: 1.0 },
+    'Pois africain': { base: 6, climateFactor: 0.95, soilFactor: 1.05 },
+    'Lentille africaine': { base: 5.5, climateFactor: 0.9, soilFactor: 1.1 },
+    'Fève africaine': { base: 6.8, climateFactor: 1.0, soilFactor: 1.0 },
+    'Radis africain': { base: 5, climateFactor: 0.95, soilFactor: 1.05 },
+    'Navet africain': { base: 6, climateFactor: 0.9, soilFactor: 1.1 },
+    'Céleri africain': { base: 7, climateFactor: 1.0, soilFactor: 1.0 },
+    'Persil africain': { base: 5.5, climateFactor: 0.95, soilFactor: 1.05 },
+    'Coriandre africaine': { base: 6, climateFactor: 0.9, soilFactor: 1.1 },
+    'Basilic africain': { base: 5, climateFactor: 1.0, soilFactor: 1.0 },
+    'Thym africain': { base: 4.5, climateFactor: 0.95, soilFactor: 1.05 },
+    'Romarin africain': { base: 5, climateFactor: 0.9, soilFactor: 1.1 },
+    'Menthe africaine': { base: 6, climateFactor: 1.0, soilFactor: 1.0 },
+    'Artemisia': { base: 3, climateFactor: 0.9, soilFactor: 1.0 },
+    'Griffonia': { base: 4, climateFactor: 1.05, soilFactor: 0.95 },
+    'Kinkeliba': { base: 4.5, climateFactor: 1.1, soilFactor: 0.85 },
+    'Moringa': { base: 7, climateFactor: 1.1, soilFactor: 0.9 },
+    'Aloe vera': { base: 2, climateFactor: 1.3, soilFactor: 0.7 },
+    'Neem': { base: 5, climateFactor: 1.2, soilFactor: 0.8 },
+    'Gingembre': { base: 6, climateFactor: 1.0, soilFactor: 1.0 },
+    'Curcuma': { base: 5.5, climateFactor: 0.95, soilFactor: 1.05 },
+    'Basilic sacré': { base: 4, climateFactor: 0.9, soilFactor: 1.1 },
+    'Citronnelle': { base: 3.5, climateFactor: 1.4, soilFactor: 0.6 },
+    'Thym': { base: 3, climateFactor: 0.8, soilFactor: 1.1 },
+    'Romarin': { base: 2.5, climateFactor: 0.75, soilFactor: 1.2 },
+    'Menthe poivrée': { base: 4, climateFactor: 0.9, soilFactor: 1.0 },
+    'Coriandre': { base: 3.8, climateFactor: 0.85, soilFactor: 1.05 },
+    'Persil': { base: 3.5, climateFactor: 0.88, soilFactor: 1.0 },
+    'Cumin': { base: 3.2, climateFactor: 0.9, soilFactor: 1.1 },
+    'Fenugrec': { base: 3.7, climateFactor: 0.85, soilFactor: 1.05 },
+    'Aneth': { base: 3.4, climateFactor: 0.88, soilFactor: 1.0 },
+    'Safran': { base: 3.1, climateFactor: 0.9, soilFactor: 1.1 },
+    'Origan': { base: 3.3, climateFactor: 0.87, soilFactor: 1.05 },
+    'Camomille': { base: 2.8, climateFactor: 0.9, soilFactor: 1.0 },
+    'Basilic sacré': { base: 4, climateFactor: 0.9, soilFactor: 1.1 },
+    'Citronnelle': { base: 3.5, climateFactor: 1.4, soilFactor: 0.6 },
+    'Bégonia': { base: 3.1, climateFactor: 0.9, soilFactor: 1.1 },
+    'Camélia': { base: 3.3, climateFactor: 0.87, soilFactor: 1.05 },
+    'Fuchsia': { base: 3.4, climateFactor: 0.88, soilFactor: 1.0 },
+    'Chrysanthème': { base: 3.5, climateFactor: 0.9, soilFactor: 1.1 },
+    'Violet': { base: 3.6, climateFactor: 0.85, soilFactor: 1.05 },
+    'Lys': { base: 3.7, climateFactor: 0.88, soilFactor: 1.0 },
+    'Tulipe': { base: 3.8, climateFactor: 0.9, soilFactor: 1.1 },
+    'Thym': { base: 3, climateFactor: 0.8, soilFactor: 1.1 },
+    'Romarin': { base: 2.5, climateFactor: 0.75, soilFactor: 1.2 },
+    'Menthe poivrée': { base: 4, climateFactor: 0.9, soilFactor: 1.0 },
+    'Coriandre': { base: 3.8, climateFactor: 0.85, soilFactor: 1.05 },
+    'Persil': { base: 3.5, climateFactor: 0.88, soilFactor: 1.0 },
+    'Cumin': { base: 3.2, climateFactor: 0.9, soilFactor: 1.1 },
+    'Fenugrec': { base: 3.7, climateFactor: 0.85, soilFactor: 1.05 },
+    'Aneth': { base: 3.4, climateFactor: 0.88, soilFactor: 1.0 },
+    'Safran': { base: 3.1, climateFactor: 0.9, soilFactor: 1.1 },
+    'Origan': { base: 3.3, climateFactor: 0.87, soilFactor: 1.05 },
+    'Basilic': { base: 4, climateFactor: 0.9, soilFactor: 1.0 },
+    'Citronnelle': { base: 3.5, climateFactor: 1.4, soilFactor: 0.6 },
+    'Lavande': { base: 3.0, climateFactor: 0.85, soilFactor: 1.1 },
+    'Géranium': { base: 3.2, climateFactor: 0.88, soilFactor: 1.0 },
+    'Bégonia': { base: 3.1, climateFactor: 0.9, soilFactor: 1.1 },
+    'Camélia': { base: 3.3, climateFactor: 0.87, soilFactor: 1.05 },
+    'Fuchsia': { base: 3.4, climateFactor: 0.88, soilFactor: 1.0 },
+    'Chrysanthème': { base: 3.5, climateFactor: 0.9, soilFactor: 1.1 },
+    'Violet': { base: 3.6, climateFactor: 0.85, soilFactor: 1.05 },
+    'Lys': { base: 3.7, climateFactor: 0.88, soilFactor: 1.0 },
+    'Tulipe': { base: 3.8, climateFactor: 0.9, soilFactor: 1.1 },
+    'Gingembre': { base: 6, climateFactor: 1.0, soilFactor: 1.0 },
+    'Curcuma': { base: 5.5, climateFactor: 0.95, soilFactor: 1.05 },
+    'Basilic sacré': { base: 4, climateFactor: 0.9, soilFactor: 1.1 },
+    'Citronnelle': { base: 3.5, climateFactor: 1.4, soilFactor: 0.6 },
+    'Thym': { base: 3, climateFactor: 0.8, soilFactor: 1.1 },
+    'Romarin': { base: 2.5, climateFactor: 0.75, soilFactor: 1.2 },
+    'Menthe poivrée': { base: 4, climateFactor: 0.9, soilFactor: 1.0 },
+    'Coriandre': { base: 3.8, climateFactor: 0.85, soilFactor: 1.05 },
+    'Persil': { base: 3.5, climateFactor: 0.88, soilFactor: 1.0 },
+    'Hibiscus': { base: 6, climateFactor: 1.0, soilFactor: 1.0 },
+    'Bougainvillier': { base: 5, climateFactor: 1.1, soilFactor: 0.9 },
+    'Frangipanier': { base: 7, climateFactor: 1.05, soilFactor: 0.95 },
+    'Lantanier': { base: 6.5, climateFactor: 1.0, soilFactor: 1.0 },
+    'Rose du désert': { base: 4, climateFactor: 1.3, soilFactor: 0.7 },
+    'Jasmin': { base: 5, climateFactor: 0.9, soilFactor: 1.1 },
+    'Lavande': { base: 3, climateFactor: 0.85, soilFactor: 1.15 },
+    'Géranium': { base: 4, climateFactor: 0.9, soilFactor: 1.1 },
+    'Bégonia': { base: 5, climateFactor: 0.95, soilFactor: 1.05 },
+    'Camélia': { base: 6, climateFactor: 1.0, soilFactor: 1.0 },
+    'Fuchsia': { base: 5.5, climateFactor: 0.95, soilFactor: 1.05 },
+    'Chrysanthème': { base: 4.5, climateFactor: 0.9, soilFactor: 1.1 },
+    'Violet': { base: 3.5, climateFactor: 0.85, soilFactor: 1.15 },
+    'Lys': { base: 6, climateFactor: 1.0, soilFactor: 1.0 },
+    'Tulipe': { base: 5, climateFactor: 0.95, soilFactor: 1.05 },
+    'Glaïeul': { base: 6.5, climateFactor: 1.0, soilFactor: 1.0 },
+    'Iris': { base: 5.5, climateFactor: 0.95, soilFactor: 1.05 },
+    'Dahlia': { base: 6, climateFactor: 1.0, soilFactor: 1.0 },
+    'Freesia': { base: 5, climateFactor: 0.95, soilFactor: 1.05 },
+    'Pivoine': { base: 6.5, climateFactor: 1.0, soilFactor: 1.0 },
+    'Cosmos': { base: 5, climateFactor: 0.95, soilFactor: 1.05 },
+    'Narcisse': { base: 4.5, climateFactor: 0.9, soilFactor: 1.1 },
+    'Pensée': { base: 3.5, climateFactor: 0.85, soilFactor: 1.15 },
+    'Canna': { base: 6, climateFactor: 1.0, soilFactor: 1.0 },
+    'Primevère': { base: 5, climateFactor: 0.95, soilFactor: 1.05 },
+    'Mimosa': { base: 6.5, climateFactor: 1.0, soilFactor: 1.0 },
+    'Rose': { base: 7, climateFactor: 1.05, soilFactor: 0.95 },
+    'Géranium rosat': { base: 4, climateFactor: 0.9, soilFactor: 1.1 },
+    'Lilas': { base: 5, climateFactor: 0.95, soilFactor: 1.05 },
+    'Pétunia': { base: 4.5, climateFactor: 0.9, soilFactor: 1.1 },
+    'Palmier dattier': { base: 20, climateFactor: 1.3, soilFactor: 1.1 },
+    'Bananiers': { base: 18, climateFactor: 1.4, soilFactor: 1.2 },
+    'Cocotier': { base: 22, climateFactor: 1.5, soilFactor: 1.1 },
+    'Avocatier': { base: 19, climateFactor: 1.2, soilFactor: 1.3 },
+    'Papayer': { base: 17, climateFactor: 1.4, soilFactor: 1.2 },
+    'Citronnier': { base: 16, climateFactor: 1.1, soilFactor: 1.0 },
+    'Oranger': { base: 17, climateFactor: 1.2, soilFactor: 1.1 },
+    'Mandarinier': { base: 18, climateFactor: 1.3, soilFactor: 1.1 },
+    'Pamplemoussier': { base: 19, climateFactor: 1.2, soilFactor: 1.2 },
+    'Grenadier': { base: 15, climateFactor: 1.1, soilFactor: 1.0 },
+    'Manguier': { base: 21, climateFactor: 1.3, soilFactor: 1.1 },
+    'Goyavier': { base: 18, climateFactor: 1.2, soilFactor: 1.1 },
+    'Caroubier': { base: 14, climateFactor: 1.1, soilFactor: 1.2 },
+    'Néflier': { base: 15, climateFactor: 1.2, soilFactor: 1.1 },
+    'Jujubier': { base: 16, climateFactor: 1.3, soilFactor: 1.0 },
+    'Corossolier': { base: 18, climateFactor: 1.3, soilFactor: 1.2 },
+    'Litchi': { base: 19, climateFactor: 1.3, soilFactor: 1.1 },
+    'Longanier': { base: 17, climateFactor: 1.2, soilFactor: 1.1 },
+    'Annonier': { base: 16, climateFactor: 1.2, soilFactor: 1.1 },
+    'Chérimolier': { base: 15, climateFactor: 1.3, soilFactor: 1.0 },
+    'Figuier': { base: 20, climateFactor: 1.1, soilFactor: 1.2 },
+    'Pêcher': { base: 14, climateFactor: 1.1, soilFactor: 1.1 },
+    'Abricotier': { base: 13, climateFactor: 1.2, soilFactor: 1.0 },
+    'Cerisier tropical': { base: 15, climateFactor: 1.2, soilFactor: 1.1 },
+    'Cacaoyer': { base: 18, climateFactor: 1.4, soilFactor: 1.3 },
+    'Noyer du Queensland': { base: 19, climateFactor: 1.3, soilFactor: 1.2 },
+    'Safoutier': { base: 17, climateFactor: 1.3, soilFactor: 1.2 },
+    'Baobab': { base: 20, climateFactor: 1.1, soilFactor: 1.3 },
+    'Marula': { base: 18, climateFactor: 1.2, soilFactor: 1.2 },
+    'Baies de sureau': { base: 12, climateFactor: 1.2, soilFactor: 1.1 },
+    'Feuilles de baobab': { base: 15, climateFactor: 1.3, soilFactor: 1.2 },
+    'Fruits du tamarinier': { base: 18, climateFactor: 1.4, soilFactor: 1.1 },
+    'Feuilles de moringa': { base: 16, climateFactor: 1.3, soilFactor: 1.2 },
+    'Fruits du jujubier': { base: 14, climateFactor: 1.2, soilFactor: 1.1 },
+    'Racines de manioc sauvage': { base: 20, climateFactor: 1.1, soilFactor: 1.3 },
+    'Feuilles d\'oseille': { base: 13, climateFactor: 1.2, soilFactor: 1.0 },
+    'Fruits du karité': { base: 17, climateFactor: 1.4, soilFactor: 1.2 },
+    'Feuilles de citronnelle': { base: 12, climateFactor: 1.1, soilFactor: 1.0 },
+    'Fruits du palmier à huile': { base: 19, climateFactor: 1.5, soilFactor: 1.1 },
+    'Noix du karité': { base: 16, climateFactor: 1.2, soilFactor: 1.1 },
+    'Fruits du dattier du désert': { base: 18, climateFactor: 1.3, soilFactor: 1.1 },
+    'Graines de néré': { base: 14, climateFactor: 1.3, soilFactor: 1.2 },
+    'Feuilles de manioc': { base: 15, climateFactor: 1.2, soilFactor: 1.0 },
+    'Fruits de l\'arbre à pain': { base: 19, climateFactor: 1.4, soilFactor: 1.1 },
+    'Tubercules d\'igname sauvage': { base: 20, climateFactor: 1.2, soilFactor: 1.3 },
+    'Graines de lotus': { base: 14, climateFactor: 1.1, soilFactor: 1.2 },
+    'Fruits du marula': { base: 18, climateFactor: 1.2, soilFactor: 1.2 },
+    'Fruits du safoutier': { base: 17, climateFactor: 1.3, soilFactor: 1.2 },
+    'Feuilles de patate douce sauvage': { base: 16, climateFactor: 1.2, soilFactor: 1.0 },
+    'Graines de pastèque sauvage': { base: 13, climateFactor: 1.1, soilFactor: 1.2 },
+    'Baies de l’argousier': { base: 14, climateFactor: 1.3, soilFactor: 1.1 },
+    'Fruits du baobab': { base: 16, climateFactor: 1.3, soilFactor: 1.2 },
+    'Gousses du caroubier': { base: 14, climateFactor: 1.2, soilFactor: 1.0 },
+    'Feuilles de pourpier': { base: 12, climateFactor: 1.1, soilFactor: 1.0 },
+
+};
+
+            const climateFactors = {
+                'tropical': 1.0,
+                'aride': 1.4,
+                'tempéré': 0.9,
+                'montagne': 0.8,
+                'semi-aride': 1.2
+            };
+
+            const soilFactors = {
+                'sableux': 1.3,
+                'argileux': 0.9,
+                'limoneux': 1.0
+            };
+
+            document.getElementById("irrigation-form").addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                const plant = document.getElementById("plant-name").value;
+                const climate = document.getElementById("climate").value;
+                const soil = document.getElementById("soil-type").value;
+
+                const plantData = plantDatabase[plant] || { base: 15, climateFactor: 1.0, soilFactor: 1.0 };
+                const totalWater = Math.round(
+                    plantData.base * 
+                    climateFactors[climate] * 
+                    soilFactors[soil]
+                );
+
+                const resultText = `Pour la culture de ${plant} en climat ${climate} sur un sol ${soil}, ` +
+                                    `les besoins en eau sont estimés à <strong>${totalWater} litres</strong> ` +
+                                    `par hectare et par jour.`;
+
+                document.getElementById("result-text").innerHTML = resultText;
+                document.getElementById("result-container").style.display = "block";
+            });
+        </script>
+
+
+<!-- Bas de page -->
+<section>
+    
+    <!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bas de page Agro-Terra</title>
+        <!-- Ajoutez Font Awesome pour les icônes si nécessaire -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+    <body>
+        <footer>
+            <div class="footer-header">
+                <h3 class="mini-tilte-1">Comment pouvons-nous aider ?</h3>
+                <h3 class="mini-tilte-1">Contactez-nous à tout moment</h3>
+            </div>
+            <div class="footer-contact">
+                <div>
+                    <strong class="color-1">Appelez-nous :</strong>
+                    <a href="tel:+212674556060">+212 674 556 060</a>
+                </div>
+                <div>
+                    <strong class="color-1" >Envoyez-nous un message :</strong>
+                    <a href="mailto:2025.agroterra@gmail.com">2025.agroterra@gmail.com</a>
+                </div>
+                <div>
+                    <strong class="color-1">Suivez-nous :</strong>
+                    <a href="https://web.facebook.com/profile.php?id=61570450615095&sk=about_contact_and_basic_info" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/agro.terra.2025/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/2025Agro_terra" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/agro-terra-681b08340/recent-activity/all/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <hr>
+            <div class="footer-bottom">
+                <img src="https://i.ibb.co/1YpQhZWb/Agro-Terra.png" alt="Agro-Terra Logo">
+                <div class="footer-links">
+                    <a href="home.html">Home</a> |
+                    <a href="contacter.html">Contactez-nous</a> |
+                    <a href="Conditions-de-services.html">Conditions de services</a> |
+                    <a href="Politique-de-vie-priv%C3%A9e.html">Politique de vie privée</a> |
+                </div>
+            </div>
+            <p class="copyright"> Copyright © Agro-Terra </p>
+        </footer>
+    </body>
+    </html>
+    
+
+</section>
+</body>
+<style>
+
+@import url(https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap);
+@import url(https://fonts.google.com/specimen/Abril+Fatface?query=abril&sidebar.open&selection.family=Abril+Fatface);
+@import url(https://fonts.google.com/specimen/Montserrat?query=monts);
+
+/* Général */
+body {
+    margin: 0 auto;
+}
+
+* {
+    font-family: Merriweather, sans-serif;
+}
+
+/* Section de la page d'accueil */
+.top-page {
+    background-image: url(https://i.ibb.co/vvMpQqmx/bg.png);
+    background-size: cover;
+    height: 70vh;
+    padding: 25px;
+}
+
+/* Header */
+header.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espacement entre le logo et la navigation */
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 20px 50px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 1000px;           /* Occupe 100% de la largeur du parent */
+    max-width: 1200px;     /* Largeur maximale du header */
+    position: relative;
+}
+
+
+/* Logo */
+header.header img {
+    margin: auto;
+    width: 70px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+header.header img:hover {
+    transform: scale(1.1);
+}
+
+/* Barre de navigation */
+.menu-style {
+    color: white;
+    text-decoration: none;
+}
+
+nav.nav {
+    display: flex;
+    margin: auto;
+    flex-direction: row; /* Aligne les éléments horizontalement */
+    justify-content: center; /* Centrer horizontalement la navigation */
+    align-items: center; /* Aligner verticalement */
+    list-style: none;
+    background: linear-gradient(90deg, #866a49e6, rgba(182, 142, 94, 0.9));
+    padding: 8px 30px; /* Réduire la hauteur en diminuant le padding vertical */
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+nav.nav li {
+    margin: 0 15px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav.nav li:hover {
+    color: rgba(255, 215, 0, 0.9); /* Couleur dorée au survol */
+    transform: scale(1.1);
+}
+
+nav.nav li.active {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+nav.nav li::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #ffd700;
+    transition: width 0.3s ease;
+    margin: 0 auto;
+}
+
+nav.nav li:hover::after {
+    width: 50%;
+}
+
+@import url(https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap);
+@import url(https://fonts.google.com/specimen/Abril+Fatface?query=abril&sidebar.open&selection.family=Abril+Fatface);
+@import url(https://fonts.google.com/specimen/Montserrat?query=monts);
+
+/* Styles généraux */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #787171c0;
+    padding: 30px 0;
+}
+
+.header-content {
+    display: flex;
+    max-width: 1200px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 40px;
+}
+
+.header-img {
+    flex: 1; /* Prend moins de place dans le cadre */
+    max-width: 250px; 
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-text {
+    margin-right: 20px;
+    margin-right: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+main {
+    margin: 50px 0;
+    padding: 0 20px;
+}
+
+.calculator-section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    display: block;
+    color: #555;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+select:focus {
+    border-color: #ffffff;
+    outline: none;
+}
+
+.btn {
+    padding: 15px 30px;
+    background-color: #c4b;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #644e35bb;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #644e35bb;
+    color: white;
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+
+#calculator-container {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #e5d5c8;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Début avec transparence totale */
+    transform: translateY(50px); /* Déplacé vers le bas */
+    animation: fadeInUp 1s ease-out forwards; /* Animation de fade-in */
+}
+
+h2 {
+    text-align: center;
+    color: #644e35bb;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font: Montserrat;
+    margin: 10px 0 5px;
+    color: #4a3721d8;
+}
+
+select, input, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    background-color: #53391b8f;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4a3721d8;
+}
+
+.result {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #bdae9cd8;
+    border-radius: 5px;
+    color: #333;
+}
+
+.result p {
+    margin: 5px 0;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #2e2115;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+            /* bas de page */
+
+    /* Style général pour le footer */
+    footer {
+        background: linear-gradient(100deg, #644e35bb, rgba(152, 114, 67, 0.635));
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        font-family: Arial, sans-serif;
+    }
+    
+    .footer-header {
+        margin-bottom: 20px;
+    }
+    
+    .footer-header h3 {
+        margin: 0;
+        font-size: 18px;
+    }
+    
+    .footer-header p {
+        font-size: 14px;
+        margin: 5px 0 0;
+    }
+    
+    .footer-contact div {
+        margin-bottom: 10px;
+    }
+    
+    footer a {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    footer a:hover {
+        text-decoration: underline;
+    }
+    
+    footer hr {
+        border: 0.5px solid rgba(0, 0, 0, 0.5);
+        margin: 20px 0;
+    }
+    
+    .footer-bottom img {
+        width: 100px;
+        margin-bottom: 10px;
+    }
+    
+    .footer-links a {
+        margin: 0 10px;
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .footer-links a:hover {
+        text-decoration: underline;
+    }
+    
+    /* Style pour les icônes des réseaux sociaux */
+    .social-icon {
+        margin: 0 5px;
+        font-size: 20px;
+    }
+    
+    
+    .social-icon:hover {
+        color: rgb(150, 85, 73);
+    }
+    
+    .color-1 {
+        color: rgb(88, 79, 67);
+    }
+    
+    .copyright {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #fff;
+        text-align: left;
+    }
+
+    /* Liste des langues */
+
+/* Conteneur du bouton et de la liste déroulante */
+.language-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Bouton principal */
+.language {
+    width: auto;
+    display: inline-flex;
+    justify-content: center;
+    background-color: #4e3e2a; /* Marron */
+    margin: auto;
+    margin-right: -35px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.language:hover {
+    background-color: #6a5533; /* Marron plus clair */
+    transform: scale(1.05); /* Zoom léger */
+}
+
+/* Liste déroulante */
+.language-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%; /* Position juste en dessous du bouton */
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    min-width: 150px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px); /* Déplacement initial */
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+/* Style des éléments de la liste */
+.language-menu li {
+    text-align: left;
+    animation: slide-in 0.4s ease forwards; /* Animation pour chaque élément */
+    opacity: 0; /* Caché avant l'animation */
+    transform: translateX(-10px); /* Décalage initial à gauche */
+}
+
+.language-menu li a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+/* Survol des liens */
+.language-menu li a:hover {
+    background-color: #f4f4f4;
+    color: #5a4633; /* Marron foncé */
+    transform: translateX(5px); /* Déplacement léger vers la droite */
+}
+
+/* Apparition de la liste déroulante */
+.language-dropdown:hover .language-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* Position d'apparition */
+}
+
+/* Activation des animations sur les éléments */
+.language-dropdown:hover .language-menu li {
+    opacity: 1; /* Rendre visible */
+    transform: translateX(0); /* Ramener en place */
+}
+
+/* Animation d'apparition pour les éléments */
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateX(-15px); /* Décalage vers la gauche */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); /* Position normale */
+    }
+}
+
+
+</style>
+</html>
